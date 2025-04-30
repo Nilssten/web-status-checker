@@ -1,6 +1,6 @@
 # 🌐 Web Status Checker using WebCrawler
 
-This Python script checks the HTTP status codes of all links found on a given webpage.  
+This project checks the HTTP status codes of all links found on a given webpage.  
 It uses a web crawler approach to extract and validate links — ideal for automation engineers, QA testers, SEO audits, and developers.
 
 ---
@@ -10,21 +10,18 @@ It uses a web crawler approach to extract and validate links — ideal for autom
 - Crawls a webpage and collects all internal and external links
 - Validates each link's HTTP status code
 - Displays real-time progress using `tqdm`
-- Designed to run as a standalone test tool
+- Accepts command-line arguments for easy automation
+- Integrates with Playwright for end-to-end test automation
 - Works across macOS, Windows, and Dockerized environments
 
 ---
 
 ## 🧰 Requirements
 
+### Python Dependencies
+
 Python 3.7 or higher.  
-Required packages:
-
-- `requests`
-- `beautifulsoup4`
-- `tqdm`
-
-You can install all dependencies with:
+Install the required packages with:
 
 ```bash
 pip install -r requirements.txt
@@ -38,6 +35,13 @@ beautifulsoup4
 tqdm
 ```
 
+### Node.js Dependencies
+Install Node.js (v16+ recommended), then install Playwright:
+
+```bash
+npm install -D @playwright/test
+npx playwright inst
+```
 ---
 
 ## 🚀 How to Use the Script
@@ -46,36 +50,49 @@ tqdm
 
 ```bash
 cd /path/to/WebStatusChecker
-python3 WebCrawler.py
+python3 webcrawler.py --url https://example.com --follow
 ```
 
 ### ✅ Option 2: Run in Windows Command Prompt
 
 ```cmd
 cd path\to\WebStatusChecker
-python WebCrawler.py
+python webcrawler.py --url https://example.com --follow
 ```
 
 ### ✅ Option 3: Run from PyCharm or another IDE
 
-1. Open the folder in PyCharm
+1.	Open the folder in PyCharm
 2. (Optional) Create and activate a virtual environment
-3. Run `WebCrawler.py` via the built-in terminal or Run menu
+3. Run webcrawler.py via the built-in terminal or Run menu
+If no arguments are provided, it will prompt you for:
+	•	A starting URL
+	•	Whether to follow internal links (yes / no)
 
 If you're using Miniconda inside PyCharm, make sure:
 - Your project interpreter is set to the correct Conda environment
 - The terminal is opened within that environment to use Python commands
 
+### ✅ Option 4: Run as a Playwright Test
+This project includes a Playwright test that runs the Python script and captures its output.
+To execute it:
+```bash
+npx playwright test
+```
+Ensure python3 points to the correct environment or adjust to python based on your setup.
+
 ---
 
-## 💻 Making It Standalone (for automation use)
+## ⚙️ CLI Arguments
 
-To make the script universally usable:
+You can pass arguments directly to skip prompts, useful for automated tests or scripting:
 
-- All core functionality remains the same
-- `tqdm` is used for user-friendly progress tracking
-- The script is now a CLI-style utility with minimal setup required
+| Argument       | Description                                           | Example                               |
+|----------------|-------------------------------------------------------|---------------------------------------|
+| `--url`        | Starting URL to crawl (must include http/https)      | `--url https://linkedin.com`          |
+| `--follow`     | Follow internal links found during crawling           | `--follow`                            |
 
+* If `--url` is provided, the script **won’t prompt you** for input. Use `--follow` if you want to crawl internal pages as well.
 ---
 
 ## 📦 Optional: Run in Docker
@@ -87,8 +104,8 @@ FROM python:3.11-slim
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY link_checker.py .
-CMD ["python", "link_checker.py"]
+COPY webcrawler.py .
+CMD ["python", "webcrawler.py"]
 ```
 
 ### Build & Run
@@ -116,12 +133,14 @@ docker run -it link-checker
 ```
 WebStatusChecker/
 │
-├── WebCrawler.py            # Main script
-├── requirements.txt           # Dependencies
-├── run_web_status_checker_mac.command   # macOS launcher (optional)
-├── run_web_status_checker_windows.bat       # Windows launcher (optional)
-├── Dockerfile                 # For Dockerized usage (optional)
-└── README.md                  # Documentation
+├── webcrawler.py                        # Main script
+├── requirements.txt                    # Python dependencies
+├── tests/
+│   └── webcrawler.spec.ts              # Playwright test runner
+├── Dockerfile                          # For Dockerized usage (optional)
+├── run_web_status_checker_mac.command  # macOS launcher (optional)
+├── run_web_status_checker_windows.bat  # Windows launcher (optional)
+└── README.md                           # Documentation
 ```
 
 ---

@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from tqdm import tqdm
 from datetime import datetime
+import argparse
+import sys
 
 
 def extract_links(url, attempts=3):
@@ -81,9 +83,9 @@ def crawl_and_check_links(start_url, follow_internal_links=False):
     return checked_links
 
 
-def save_html_report(checked_links):
+def save_html_report(checked_links, filename=None):
     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    report_file = f"link_report_{now}.html"
+    report_file = filename or f"link_report_{now}.html"
 
     successful = sum(1 for _, code, _ in checked_links if code == 200)
     errors = sum(1 for _, code, _ in checked_links if code == "ERROR")
@@ -99,16 +101,25 @@ def save_html_report(checked_links):
         f.write("<ul>")
         for url, status, note in checked_links:
             color = 'green' if status == 200 else 'red'
-            f.write(
-                f"<li><b style='color:{color}'>{status}</b> - <a href='{url}' target='_blank'>{url}</a>: {note}</li>")
+            f.write(f"<li><b style='color:{color}'>{status}</b> - <a href='{url}' target='_blank'>{url}</a>: {note}</li>")
         f.write("</ul></body></html>")
 
     print(f"\nDetailed report saved to {report_file}")
 
 
-if __name__ == "__main__":
-    start_url = input("Enter the starting URL (must include http/https): ").strip()
-    follow_internal = input("Would you like to follow internal links? (yes/no): ").strip().lower() == "yes"
+def main():
+    parser = argparse.ArgumentParser(description="Link checker")
+    parser.add_argument('--url', type=str, help='Starting URL (must include http/https)')
+    parser.add_argument('--follow', action='store_true', help='Follow internal links')
+
+    args = parser.parse_args()
+
+    if args.url:
+        start_url = args.url
+        follow_internal = args.follow
+    else:
+        start_url = input("Enter the starting URL (must include http/https): ").strip()
+        follow_internal = input("Would you like to follow internal links? (yes/no): ").strip().lower() == "yes"
 
     result = crawl_and_check_links(start_url, follow_internal_links=follow_internal)
 
@@ -116,3 +127,7 @@ if __name__ == "__main__":
         save_html_report(result)
     else:
         print("No links found or error occurred.")
+
+
+if __name__ == "__main__":
+    main()
