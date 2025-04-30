@@ -81,6 +81,8 @@ npx playwright test
 ```
 Ensure python3 points to the correct environment or adjust to python based on your setup.
 
+#### 📝 Results are saved as html file in test-results folder
+
 ---
 
 ## ⚙️ CLI Arguments

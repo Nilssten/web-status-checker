@@ -7,6 +7,7 @@ from tqdm import tqdm
 from datetime import datetime
 import argparse
 import sys
+import os
 
 
 def extract_links(url, attempts=3):
@@ -85,7 +86,10 @@ def crawl_and_check_links(start_url, follow_internal_links=False):
 
 def save_html_report(checked_links, filename=None):
     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    report_file = filename or f"link_report_{now}.html"
+    # Ensure test-results directory exists
+    os.makedirs("test-results", exist_ok=True)
+
+    report_file = filename or os.path.join("test-results", f"link_report_{now}.html")
 
     successful = sum(1 for _, code, _ in checked_links if code == 200)
     errors = sum(1 for _, code, _ in checked_links if code == "ERROR")
@@ -98,10 +102,40 @@ def save_html_report(checked_links, filename=None):
         f.write(f"<p>Successful: {successful}</p>")
         f.write(f"<p>Broken: {broken}</p>")
         f.write(f"<p>Errors: {errors}</p><hr>")
+
+        # Add filtering buttons and JavaScript
+        f.write("""
+        <div>
+            <button onclick="filterLinks('all')">Show All</button>
+            <button onclick="filterLinks('passed')">Passed</button>
+            <button onclick="filterLinks('failed')">Failed</button>
+            <button onclick="filterLinks('error')">Errors</button>
+        </div>
+        <script>
+        function filterLinks(filter) {
+            const items = document.querySelectorAll('li[data-status]');
+            items.forEach(item => {
+                const status = item.getAttribute('data-status');
+                item.style.display = 
+                    (filter === 'all' || filter === status) ? 'list-item' : 'none';
+            });
+        }
+        </script>
+        """)
+
         f.write("<ul>")
         for url, status, note in checked_links:
             color = 'green' if status == 200 else 'red'
-            f.write(f"<li><b style='color:{color}'>{status}</b> - <a href='{url}' target='_blank'>{url}</a>: {note}</li>")
+            status_category = (
+                "passed" if status == 200 else
+                "error" if status == "ERROR" else
+                "failed"
+            )
+            f.write(
+                f"<li data-status='{status_category}'>"
+                f"<b style='color:{color}'>{status}</b> - "
+                f"<a href='{url}' target='_blank'>{url}</a>: {note}</li>"
+            )
         f.write("</ul></body></html>")
 
     print(f"\nDetailed report saved to {report_file}")
