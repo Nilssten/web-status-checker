@@ -1,0 +1,23 @@
+{
+  "name": "webstatuschecker",
+  "version": "1.0.0",
+  "description": "This Python script checks the HTTP status codes of all links found on a given webpage.   It uses a web crawler approach to extract and validate links — ideal for automation engineers, QA testers, SEO audits, and developers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nilssten/web-status-checker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nilssten/web-status-checker/issues"
+  },
+  "homepage": "https://github.com/Nilssten/web-status-checker#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
+  }
+}
