@@ -9,6 +9,7 @@ It uses a web crawler approach to extract and validate links — ideal for autom
 
 - Crawls a webpage and collects all internal and external links
 - Validates each link's HTTP status code
+- Uses multithreading to check links concurrently for better performance
 - Displays real-time progress using `tqdm`
 - Saves results in a user-friendly HTML report
   - Color-coded status indicators
@@ -86,6 +87,9 @@ To execute it:
 ```bash
 npx playwright test
 ```
+
+This **test** is located at: `tests/webcrawler.spec.ts`
+
 Ensure python3 points to the correct environment or adjust to python based on your setup.
 
 #### 📝 Results are saved as html file in test-results folder

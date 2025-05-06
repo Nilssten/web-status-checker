@@ -8,6 +8,7 @@ from datetime import datetime
 import argparse
 import sys
 import os
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 
 def extract_links(url, attempts=3):
@@ -31,10 +32,19 @@ def extract_links(url, attempts=3):
 
 def check_link(link):
     try:
-        r = requests.head(link, allow_redirects=True, timeout=5)
-        return (link, r.status_code, None)
-    except requests.RequestException as e:
-        return (link, "ERROR", str(e))
+        response = requests.head(link, timeout=10, allow_redirects=True)
+        return (link, response.status_code)
+    except Exception as e:
+        return (link, str(e))
+
+def check_all_links_concurrently(links, max_workers=10):
+    results = []
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_url = {executor.submit(check_link, url): url for url in links}
+        for future in as_completed(future_to_url):
+            link, status = future.result()
+            results.append((link, status))
+    return results
 
 
 def get_status_notes(status_code):
@@ -63,23 +73,22 @@ def crawl_and_check_links(start_url, follow_internal_links=False):
         print(f"Error extracting links: {error_message}")
         return checked_links
 
-    total_links = len(links_to_check)
-    print(f"\nFound {total_links} links on {start_url}")
+    print(f"\nFound {len(links_to_check)} links on {start_url}")
     print("-" * 50)
 
-    for link in tqdm(links_to_check, desc="Checking links", unit="link"):
-        link_data = check_link(link)
-        status_code = link_data[1]
+    # Main batch of links (first layer)
+    results = check_links_concurrently(links_to_check)
+    for link, status_code in results:
         note = get_status_notes(status_code)
-        checked_links.append((link_data[0], status_code, note))
+        checked_links.append((link, status_code, note))
 
+        # If --follow is set and the link is OK, crawl internal links too
         if follow_internal_links and status_code == 200:
             internal_links, _ = extract_links(link)
-            for internal_link in internal_links:
-                internal_data = check_link(internal_link)
-                internal_status_code = internal_data[1]
-                internal_note = get_status_notes(internal_status_code)
-                checked_links.append((internal_data[0], internal_status_code, internal_note))
+            internal_results = check_links_concurrently(internal_links)
+            for int_link, int_status_code in internal_results:
+                note = get_status_notes(int_status_code)
+                checked_links.append((int_link, int_status_code, note))
 
     return checked_links
 
