@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Added Download as csv button functionality in the generated html results file" />
+    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Bug fixes, added a manual tqdm wrapper" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,18 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Nilssten"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Nilssten&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Nilssten/web-status-checker.git",
-    "accountId": "0728fdfb-4d04-4b88-ad06-c6c219d23e68"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Nilssten/web-status-checker.git&quot;,
+    &quot;accountId&quot;: &quot;0728fdfb-4d04-4b88-ad06-c6c219d23e68&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -144,7 +144,39 @@
       <option name="project" value="LOCAL" />
       <updated>1746018474479</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implemented exit codes for CI/CD or scripting">
+      <option name="closed" value="true" />
+      <created>1746539325909</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746539325909</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updated README file">
+      <option name="closed" value="true" />
+      <created>1746539666892</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1746539666893</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Improve performance with multithreaded link checking and tqdm progress bar">
+      <option name="closed" value="true" />
+      <created>1746541516090</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746541516091</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Bug fixes, added a manual tqdm wrapper">
+      <option name="closed" value="true" />
+      <created>1746542581305</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1746542581305</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -152,6 +184,10 @@
     <MESSAGE value="Playwright integration and the command-line interface improvements to webcrawler.py,&#10;Updated readme file" />
     <MESSAGE value="Implemented better result filtering with javascript, added extra info in readme" />
     <MESSAGE value="Added Download as csv button functionality in the generated html results file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Download as csv button functionality in the generated html results file" />
+    <MESSAGE value="Implemented exit codes for CI/CD or scripting" />
+    <MESSAGE value="Updated README file" />
+    <MESSAGE value="Improve performance with multithreaded link checking and tqdm progress bar" />
+    <MESSAGE value="Bug fixes, added a manual tqdm wrapper" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fixes, added a manual tqdm wrapper" />
   </component>
 </project>
