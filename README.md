@@ -96,12 +96,20 @@ Ensure python3 points to the correct environment or adjust to python based on yo
 
 You can pass arguments directly to skip prompts, useful for automated tests or scripting:
 
-| Argument       | Description                                           | Example                               |
-|----------------|-------------------------------------------------------|---------------------------------------|
-| `--url`        | Starting URL to crawl (must include http/https)      | `--url https://linkedin.com`          |
-| `--follow`     | Follow internal links found during crawling           | `--follow`                            |
+| Argument | Description                                           | Example                       |
+|--------|-------------------------------------------------------|-------------------------------|
+| `--url` | Starting URL to crawl (must include http/https)      | `--url https://linkedin.com`  |
+| `--follow` | Follow internal links found during crawling           | `--follow`                    |
+| `fail-on-broken`     | Exit with code 1 if any link fails (for CI pipelines)           | `--fail-on-broken`                            |
+
+### 🔧 Example usage:
+```bash
+python3 webcrawler.py --url https://linkedin.com --follow --fail-on-broken
+```
+✅ Use echo $? (macOS/Linux) or echo %ERRORLEVEL% (Windows) after running to check the exit code.
 
 * If `--url` is provided, the script **won’t prompt you** for input. Use `--follow` if you want to crawl internal pages as well.
+* If `--fail-on-broken` is set, the script **will return exit code 1** when broken or failed links are found — useful for CI/CD and monitoring workflows.
 ---
 
 ## 📦 Optional: Run in Docker
