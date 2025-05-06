@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Refactor web crawler script: removed pandas, added HTML report, improved progress bar; added Dockerfile, README, requirements.txt, and launch scripts for macOS and Windows">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebCrawler.py" afterDir="false" />
-    </list>
+    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Added Download as csv button functionality in the generated html results file" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Nilssten"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Nilssten/web-status-checker.git",
+    "accountId": "0728fdfb-4d04-4b88-ad06-c6c219d23e68"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -104,11 +112,46 @@
       <option name="project" value="LOCAL" />
       <updated>1746006571908</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Playwright integration and the command-line interface improvements to webcrawler.py,&#10;Updated readme file">
+      <option name="closed" value="true" />
+      <created>1746010982009</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746010982009</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Playwright integration and the command-line interface improvements to webcrawler.py,&#10;Updated readme file">
+      <option name="closed" value="true" />
+      <created>1746011016779</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746011016779</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implemented better result filtering with javascript, added extra info in readme">
+      <option name="closed" value="true" />
+      <created>1746017380328</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746017380328</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added Download as csv button functionality in the generated html results file">
+      <option name="closed" value="true" />
+      <created>1746018474479</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746018474479</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactor web crawler script: removed pandas, added HTML report, improved progress bar; added Dockerfile, README, requirements.txt, and launch scripts for macOS and Windows" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor web crawler script: removed pandas, added HTML report, improved progress bar; added Dockerfile, README, requirements.txt, and launch scripts for macOS and Windows" />
+    <MESSAGE value="Playwright integration and the command-line interface improvements to webcrawler.py,&#10;Updated readme file" />
+    <MESSAGE value="Implemented better result filtering with javascript, added extra info in readme" />
+    <MESSAGE value="Added Download as csv button functionality in the generated html results file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Download as csv button functionality in the generated html results file" />
   </component>
 </project>

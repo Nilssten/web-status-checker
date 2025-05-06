@@ -10,9 +10,16 @@ It uses a web crawler approach to extract and validate links — ideal for autom
 - Crawls a webpage and collects all internal and external links
 - Validates each link's HTTP status code
 - Displays real-time progress using `tqdm`
+- Saves results in a user-friendly HTML report
+  - Color-coded status indicators
+  - Filter links by success, error, or failure
+  - One-click CSV export for offline analysis
+- Returns appropriate exit codes for CI/CD or scripting
+  - 0 if all links are valid
+  - 1 if broken links are found (with --fail-on-broken)
 - Accepts command-line arguments for easy automation
-- Integrates with Playwright for end-to-end test automation
 - Works across macOS, Windows, and Dockerized environments
+- (Optional) Integrates with Playwright for test automation
 
 ---
 

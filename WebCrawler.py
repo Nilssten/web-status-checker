@@ -172,6 +172,7 @@ def main():
     parser = argparse.ArgumentParser(description="Link checker")
     parser.add_argument('--url', type=str, help='Starting URL (must include http/https)')
     parser.add_argument('--follow', action='store_true', help='Follow internal links')
+    parser.add_argument('--fail-on-broken', action='store_true', help='Exit with error if any broken or error links found')  # <-- NEW FLAG
 
     args = parser.parse_args()
 
@@ -186,6 +187,13 @@ def main():
 
     if result:
         save_html_report(result)
+
+        if args.fail_on_broken:
+            broken_count = sum(1 for _, code, _ in result if code != 200)
+            if broken_count > 0:
+                print(f"\n❌ {broken_count} broken/error links found. Exiting with error code 1.")
+                sys.exit(1)
+
     else:
         print("No links found or error occurred.")
 
