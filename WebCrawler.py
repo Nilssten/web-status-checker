@@ -40,10 +40,14 @@ def check_link(link):
 def check_all_links_concurrently(links, max_workers=10):
     results = []
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_to_url = {executor.submit(check_link, url): url for url in links}
-        for future in as_completed(future_to_url):
-            link, status = future.result()
-            results.append((link, status))
+        futures = {executor.submit(check_link, link): link for link in links}
+        for future in tqdm(as_completed(futures), total=len(futures), desc="Checking links"):
+            link = futures[future]
+            try:
+                result = future.result()
+            except Exception as e:
+                result = (link, f"error: {e}")
+            results.append(result)
     return results
 
 
@@ -77,7 +81,7 @@ def crawl_and_check_links(start_url, follow_internal_links=False):
     print("-" * 50)
 
     # Main batch of links (first layer)
-    results = check_links_concurrently(links_to_check)
+    results = check_all_links_concurrently(links_to_check)
     for link, status_code in results:
         note = get_status_notes(status_code)
         checked_links.append((link, status_code, note))
@@ -85,7 +89,7 @@ def crawl_and_check_links(start_url, follow_internal_links=False):
         # If --follow is set and the link is OK, crawl internal links too
         if follow_internal_links and status_code == 200:
             internal_links, _ = extract_links(link)
-            internal_results = check_links_concurrently(internal_links)
+            internal_results = check_all_links_concurrently(internal_links)
             for int_link, int_status_code in internal_results:
                 note = get_status_notes(int_status_code)
                 checked_links.append((int_link, int_status_code, note))
@@ -188,9 +192,12 @@ def main():
     if args.url:
         start_url = args.url
         follow_internal = args.follow
+        fail_on_broken = args.fail_on_broken
     else:
         start_url = input("Enter the starting URL (must include http/https): ").strip()
         follow_internal = input("Would you like to follow internal links? (yes/no): ").strip().lower() == "yes"
+        user_input = input("Fail if broken links are found? (yes/no): ").strip().lower()
+        fail_on_broken = user_input in ['yes', 'y']
 
     result = crawl_and_check_links(start_url, follow_internal_links=follow_internal)
 
