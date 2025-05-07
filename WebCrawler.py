@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 from jinja2 import Environment, FileSystemLoader
 import httpx
+import asyncio
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from tqdm import tqdm
+from tqdm.asyncio import tqdm_asyncio
 from datetime import datetime
 import argparse
 import sys
@@ -33,26 +35,19 @@ def extract_links(url, attempts=3):
             return set(), str(e)
 
 
-def check_link(link):
+async def check_link_async(client, link):
     try:
-        response = httpx.head(link, timeout=10, follow_redirects=True)
-        if response.status_code >= 400 or response.status_code == 405:
-            # Fallback to GET if HEAD fails or is not allowed
-            response = httpx.get(link, timeout=10, follow_redirects=True)
-        return (link, response.status_code)
+        response = await client.head(link, follow_redirects=True, timeout=10)
+        return (link, response.status_code, "")
     except Exception as e:
-        return (link, str(e))
+        return (link, "ERROR", str(e))
 
-def check_all_links_concurrently(links, max_workers=10):
+async def check_all_links_async(links):
     results = []
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = {executor.submit(check_link, link): link for link in links}
-        for future in tqdm(as_completed(futures), total=len(futures), desc="Checking links", dynamic_ncols=False, mininterval=0.5):
-            link = futures[future]
-            try:
-                result = future.result()
-            except Exception as e:
-                result = (link, f"error: {e}")
+    async with httpx.AsyncClient(http2=True, timeout=10) as client:
+        tasks = [check_link_async(client, link) for link in links]
+        for coro in tqdm_asyncio.as_completed(tasks, total=len(tasks), desc="Checking links"):
+            result = await coro
             results.append(result)
     return results
 
@@ -75,7 +70,7 @@ def get_status_notes(status_code):
     return status_notes.get(status_code, "Unexpected status code.")
 
 
-def crawl_and_check_links(start_url, follow_internal_links=False):
+async def crawl_and_check_links(start_url, follow_internal_links=False):
     checked_links = []
     links_to_check, error_message = extract_links(start_url)
 
@@ -86,22 +81,22 @@ def crawl_and_check_links(start_url, follow_internal_links=False):
     print(f"\nFound {len(links_to_check)} links on {start_url}")
     print("-" * 50)
 
-    # Main batch of links (first layer)
-    results = check_all_links_concurrently(links_to_check)
-    for link, status_code in results:
+    # First batch of links
+    results = await check_all_links_async(links_to_check)
+    for link, status_code, error in results:
         note = get_status_notes(status_code)
         checked_links.append((link, status_code, note))
 
         # If --follow is set and the link is OK, crawl internal links too
         if follow_internal_links and status_code == 200:
             internal_links, _ = extract_links(link)
-            internal_results = check_all_links_concurrently(internal_links)
-            for int_link, int_status_code in internal_results:
-                note = get_status_notes(int_status_code)
-                checked_links.append((int_link, int_status_code, note))
+            if internal_links:
+                internal_results = await check_all_links_async(internal_links)
+                for int_link, int_status_code, int_error in internal_results:
+                    note = get_status_notes(int_status_code)
+                    checked_links.append((int_link, int_status_code, note))
 
     return checked_links
-
 
 def save_html_report(checked_links, filename=None):
     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
@@ -156,23 +151,21 @@ def main():
         fail_on_broken = args.fail_on_broken
     else:
         start_url = input("Enter the starting URL (must include http/https): ").strip()
-        follow_internal = input("Would you like to follow internal links? (yes/no): ").strip().lower() == "yes"
-        user_input = input("Fail if broken links are found? (yes/no): ").strip().lower()
-        fail_on_broken = user_input in ['yes', 'y']
+        follow_internal = input("Would you like to follow internal links? (yes/no): ").strip().lower() in ["yes", "y"]
+        fail_on_broken = input("Fail if broken links are found? (yes/no): ").strip().lower() in ["yes", "y"]
 
-    result = crawl_and_check_links(start_url, follow_internal_links=follow_internal)
+    result = asyncio.run(crawl_and_check_links(start_url, follow_internal_links=follow_internal))
 
     if result:
         save_html_report(result)
 
-        if args.fail_on_broken:
-            broken_count = sum(1 for _, code, _ in result if code != 200)
+        if fail_on_broken:
+            broken_count = sum(1 for _, code, _ in result if code != 200 and code != "ERROR")
             if broken_count > 0:
                 print(f"\n❌ {broken_count} broken/error links found. Exiting with error code 1.")
                 sys.exit(1)
-
     else:
-        print("No links found or error occurred.")
+        print("No links found or an error occurred.")
 
 
 if __name__ == "__main__":
