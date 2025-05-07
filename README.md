@@ -38,7 +38,7 @@ pip install -r requirements.txt
 Your `requirements.txt` should contain:
 
 ```
-requests
+httpx
 beautifulsoup4
 tqdm
 ```

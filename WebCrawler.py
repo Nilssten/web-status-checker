@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import requests
+import httpx
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
 from tqdm import tqdm
@@ -13,11 +13,14 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def extract_links(url, attempts=3):
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+        'Referer': url,
+        'Accept': 'text/html,application/xhtml+xml',
     }
+
     for _ in range(attempts):
         try:
-            response = requests.get(url, headers=headers, timeout=20)
+            response = httpx.get(url, headers=headers, timeout=20)
             soup = BeautifulSoup(response.text, 'html.parser')
             links = set()
             for link in soup.find_all('a'):
@@ -32,7 +35,10 @@ def extract_links(url, attempts=3):
 
 def check_link(link):
     try:
-        response = requests.head(link, timeout=10, allow_redirects=True)
+        response = httpx.head(link, timeout=10, follow_redirects=True)
+        if response.status_code >= 400 or response.status_code == 405:
+            # Fallback to GET if HEAD fails or is not allowed
+            response = httpx.get(link, timeout=10, follow_redirects=True)
         return (link, response.status_code)
     except Exception as e:
         return (link, str(e))
