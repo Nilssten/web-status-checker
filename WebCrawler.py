@@ -11,6 +11,7 @@ import argparse
 import sys
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from urllib.parse import urlparse
 
 
 def extract_links(url, attempts=3):
@@ -72,29 +73,39 @@ def get_status_notes(status_code):
 
 async def crawl_and_check_links(start_url, follow_internal_links=False):
     checked_links = []
-    links_to_check, error_message = extract_links(start_url)
+    seen_links = set()
 
+    def filter_new_links(links):
+        return [link for link in links if link not in seen_links]
+
+    links_to_check, error_message = extract_links(start_url)
     if error_message:
         print(f"Error extracting links: {error_message}")
         return checked_links
 
+    links_to_check = filter_new_links(links_to_check)
+    seen_links.update(links_to_check)
+
     print(f"\nFound {len(links_to_check)} links on {start_url}")
     print("-" * 50)
 
-    # First batch of links
     results = await check_all_links_async(links_to_check)
+
     for link, status_code, error in results:
         note = get_status_notes(status_code)
-        checked_links.append((link, status_code, note))
+        checked_links.append((link, status_code, note, 'start_url'))
 
         # If --follow is set and the link is OK, crawl internal links too
         if follow_internal_links and status_code == 200:
             internal_links, _ = extract_links(link)
+            internal_links = filter_new_links(internal_links)
+            seen_links.update(internal_links)
+
             if internal_links:
                 internal_results = await check_all_links_async(internal_links)
                 for int_link, int_status_code, int_error in internal_results:
-                    note = get_status_notes(int_status_code)
-                    checked_links.append((int_link, int_status_code, note))
+                    int_note = get_status_notes(int_status_code)
+                    checked_links.append((int_link, int_status_code, int_note, 'internal'))
 
     return checked_links
 
@@ -103,27 +114,47 @@ def save_html_report(checked_links, filename=None):
     report_file = filename or f"test-results/link_report_{now}.html"
 
     # Count stats
-    successful = sum(1 for _, code, _ in checked_links if code == 200)
-    errors = sum(1 for _, code, _ in checked_links if code == "ERROR")
-    broken = sum(1 for _, code, _ in checked_links if code != 200 and code != "ERROR")
+    successful = sum(1 for _, code, _, _ in checked_links if code == 200)
+    errors = sum(1 for _, code, _, _ in checked_links if code == "ERROR")
+    broken = sum(1 for _, code, _, _ in checked_links if code != 200 and code != "ERROR")
 
     # Prepare CSV content
-    csv_content = "URL,Status,Note\n"
-    for url, status, note in checked_links:
+    csv_content = "URL,Status,Note,Source\n"
+
+    # Prepare structured data for rendering
+    render_links = []
+    for url, status, note, source in checked_links:
         safe_note = note.replace(",", " ").replace("\n", " ")
-        csv_content += f'"{url}",{status},"{safe_note}"\n'
+        csv_content += f'"{url}",{status},"{safe_note}",{source}\n'
+
+        domain = urlparse(url).netloc
+        source_domain = urlparse(source).netloc
+        if ".gov" in domain or ".edu" in domain:
+            source_class = "trusted"
+        elif domain == source_domain:
+            source_class = "internal"
+        else:
+            source_class = ""
+
+        render_links.append({
+            "url": url,
+            "status": status,
+            "note": note,
+            "source": source,
+            "class": source_class
+        })
 
     # Set up Jinja2
     env = Environment(loader=FileSystemLoader('templates'))
     template = env.get_template('report.html')
 
-    # Render template
+    # Render HTML template
     rendered_html = template.render(
         total=len(checked_links),
         successful=successful,
         broken=broken,
         errors=errors,
-        links=checked_links,
+        links=render_links,
         csv_content=csv_content,
         timestamp=now
     )
@@ -135,7 +166,6 @@ def save_html_report(checked_links, filename=None):
 
     full_path = os.path.abspath(report_file)
     print(f"\n✅ Detailed report saved to: file://{full_path}")
-
 
 def main():
     parser = argparse.ArgumentParser(description="Link checker")
@@ -160,7 +190,7 @@ def main():
         save_html_report(result)
 
         if fail_on_broken:
-            broken_count = sum(1 for _, code, _ in result if code != 200 and code != "ERROR")
+            broken_count = sum(1 for _, code, _, _ in result if code != 200 and code != "ERROR")
             if broken_count > 0:
                 print(f"\n❌ {broken_count} broken/error links found. Exiting with error code 1.")
                 sys.exit(1)

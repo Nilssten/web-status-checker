@@ -59,14 +59,14 @@ npx playwright inst
 
 ```bash
 cd /path/to/WebStatusChecker
-python3 webcrawler.py --url https://example.com --follow
+python3 webcrawler.py --url https://testpages.herokuapp.com/ --follow
 ```
 
 ### ✅ Option 2: Run in Windows Command Prompt
 
 ```cmd
 cd path\to\WebStatusChecker
-python webcrawler.py --url https://example.com --follow
+python webcrawler.py --url https://testpages.herokuapp.com/ --follow
 ```
 
 ### ✅ Option 3: Run from PyCharm or another IDE
@@ -101,15 +101,15 @@ Ensure python3 points to the correct environment or adjust to python based on yo
 
 You can pass arguments directly to skip prompts, useful for automated tests or scripting:
 
-| Argument | Description                                           | Example                       |
-|--------|-------------------------------------------------------|-------------------------------|
-| `--url` | Starting URL to crawl (must include http/https)      | `--url https://linkedin.com`  |
-| `--follow` | Follow internal links found during crawling           | `--follow`                    |
-| `fail-on-broken`     | Exit with code 1 if any link fails (for CI pipelines)           | `--fail-on-broken`                            |
+| Argument           | Description                                           | Example                       |
+|--------------------|-------------------------------------------------------|-------------------------------|
+| `--url`            | Starting URL to crawl (must include http/https)      | `--url https://linkedin.com`  |
+| `--follow`         | Follow internal links found during crawling           | `--follow`                    |
+| `--fail-on-broken` | Exit with code 1 if any link fails (for CI pipelines)           | `--fail-on-broken`                            |
 
 ### 🔧 Example usage:
 ```bash
-python3 webcrawler.py --url https://linkedin.com --follow --fail-on-broken
+python3 webcrawler.py --url https://testpages.herokuapp.com/ --follow --fail-on-broken
 ```
 ✅ Use echo $? (macOS/Linux) or echo %ERRORLEVEL% (Windows) after running to check the exit code.
 

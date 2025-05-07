@@ -10,7 +10,17 @@
         .success { color: green; }
         .fail { color: red; }
         .error { color: orange; }
-        li { margin-bottom: 5px; }
+        .trusted { color: green; }
+        .internal { color: gray; }
+        .sortable th {
+            cursor: pointer;
+        }
+        .sortable th:hover {
+            text-decoration: underline;
+        }
+        .filter-btn {
+            margin-right: 8px;
+        }
     </style>
 </head>
 <body class="container py-4">
@@ -24,47 +34,95 @@
     </div>
 
     <div class="mb-3">
-        <button class="btn btn-secondary btn-sm" onclick="filterLinks('all')">Show All</button>
-        <button class="btn btn-success btn-sm" onclick="filterLinks('success')">✅ Passed</button>
-        <button class="btn btn-danger btn-sm" onclick="filterLinks('fail')">❌ Failed</button>
-        <button class="btn btn-warning btn-sm" onclick="filterLinks('error')">⚠️ Errors</button>
-        <button class="btn btn-primary btn-sm" onclick="downloadCSV()">⬇️ Download CSV</button>
+        <button class="btn btn-outline-secondary filter-btn" data-filter="all">Show All</button>
+        <button class="btn btn-outline-success filter-btn" data-filter="success">✅ 200 OK</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="error">⚠️ Error</button>
+        <button class="btn btn-outline-danger filter-btn" data-filter="fail">❌ Broken</button>
     </div>
 
-    <ul class="list-group">
-        {% for url, status, note in links %}
-            <li class="list-group-item {{ 'success' if status == 200 else 'error' if status == 'ERROR' else 'fail' }}">
-                <b class="{{ 'text-success' if status == 200 else 'text-warning' if status == 'ERROR' else 'text-danger' }}">
-                    {{ status }}
-                </b> - <a href="{{ url }}" target="_blank">{{ url }}</a> : {{ note }}
-            </li>
-        {% endfor %}
-    </ul>
+    <table class="table table-bordered sortable" id="linkTable">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>URL</th>
+                <th>Note</th>
+                <th>Source</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in links %}
+                <tr class="link-row
+                          {% if item.status == 200 %}success{% elif item.status == 'ERROR' %}error{% else %}fail{% endif %}
+                          {{ item.class }}">
+                    <td>
+                        {% if item.status == 200 %}
+                            <span class="badge bg-light text-success">✅ 200 OK</span>
+                        {% elif item.status == 'ERROR' %}
+                            <span class="badge bg-light text-warning">⚠️ ERROR</span>
+                        {% else %}
+                            <span class="badge bg-light text-danger">❌ {{ item.status }}</span>
+                        {% endif %}
+                    </td>
+                    <td><a href="{{ item.url }}" target="_blank">{{ item.url }}</a></td>
+                    <td>{{ item.note }}</td>
+                    <td>
+                        {{ item.source }}
+                        {% if item.class == "trusted" %}
+                            <span class="badge bg-info text-dark ms-2">Trusted</span>
+                        {% elif item.class == "internal" %}
+                            <span class="badge bg-secondary text-light ms-2">Internal</span>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
     <script>
-        function downloadCSV() {
-            const csvData = `{{ csv_content | safe }}`;
-            const blob = new Blob([csvData], { type: 'text/csv' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.setAttribute('hidden', '');
-            a.setAttribute('href', url);
-            a.setAttribute('download', 'link_report_{{ timestamp }}.csv');
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-
-        function filterLinks(type) {
-            const items = document.querySelectorAll('li');
-            items.forEach(item => {
-                if (type === 'all' || item.classList.contains(type)) {
-                    item.style.display = 'list-item';
-                } else {
-                    item.style.display = 'none';
-                }
+        // Filter buttons
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                const rows = document.querySelectorAll('.link-row');
+                rows.forEach(row => {
+                    if (filter === 'all') {
+                        row.style.display = '';
+                    } else {
+                        // Filtering by success/error/fail status
+                        const rowClasses = row.classList;
+                        if (
+                            (filter === 'success' && rowClasses.contains('success')) ||
+                            (filter === 'error' && rowClasses.contains('error')) ||
+                            (filter === 'fail' && rowClasses.contains('fail'))
+                        ) {
+                            row.style.display = '';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    }
+                });
             });
-        }
+        });
+
+        // Sorting logic
+        document.querySelectorAll('.sortable th').forEach((header, columnIndex) => {
+            header.addEventListener('click', () => {
+                const table = header.closest('table');
+                const tbody = table.querySelector('tbody');
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+
+                const asc = header.classList.toggle('asc');
+                rows.sort((a, b) => {
+                    const cellA = a.children[columnIndex].innerText.toLowerCase();
+                    const cellB = b.children[columnIndex].innerText.toLowerCase();
+                    return asc ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+                });
+
+                tbody.innerHTML = '';
+                rows.forEach(row => tbody.appendChild(row));
+            });
+        });
     </script>
 </body>
 </html>
