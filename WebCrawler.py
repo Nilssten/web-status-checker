@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+from jinja2 import Environment, FileSystemLoader
 import httpx
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin
@@ -47,7 +47,7 @@ def check_all_links_concurrently(links, max_workers=10):
     results = []
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = {executor.submit(check_link, link): link for link in links}
-        for future in tqdm(as_completed(futures), total=len(futures), desc="Checking links"):
+        for future in tqdm(as_completed(futures), total=len(futures), desc="Checking links", dynamic_ncols=False, mininterval=0.5):
             link = futures[future]
             try:
                 result = future.result()
@@ -107,6 +107,7 @@ def save_html_report(checked_links, filename=None):
     now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     report_file = filename or f"test-results/link_report_{now}.html"
 
+    # Count stats
     successful = sum(1 for _, code, _ in checked_links if code == 200)
     errors = sum(1 for _, code, _ in checked_links if code == "ERROR")
     broken = sum(1 for _, code, _ in checked_links if code != 200 and code != "ERROR")
@@ -117,81 +118,35 @@ def save_html_report(checked_links, filename=None):
         safe_note = note.replace(",", " ").replace("\n", " ")
         csv_content += f'"{url}",{status},"{safe_note}"\n'
 
-    # JavaScript for CSV download + filtering
-    scripts = f"""
-    <script>
-    function downloadCSV() {{
-        const csvData = `{csv_content}`;
-        const blob = new Blob([csvData], {{ type: 'text/csv' }});
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.setAttribute('hidden', '');
-        a.setAttribute('href', url);
-        a.setAttribute('download', 'link_report_{now}.csv');
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    }}
+    # Set up Jinja2
+    env = Environment(loader=FileSystemLoader('templates'))
+    template = env.get_template('report.html')
 
-    function filterLinks(statusType) {{
-        const items = document.querySelectorAll('li');
-        items.forEach(item => {{
-            if (statusType === 'all') {{
-                item.style.display = 'list-item';
-            }} else if (item.classList.contains(statusType)) {{
-                item.style.display = 'list-item';
-            }} else {{
-                item.style.display = 'none';
-            }}
-        }});
-    }}
-    </script>
-    """
+    # Render template
+    rendered_html = template.render(
+        total=len(checked_links),
+        successful=successful,
+        broken=broken,
+        errors=errors,
+        links=checked_links,
+        csv_content=csv_content,
+        timestamp=now
+    )
 
-    # Begin HTML report
+    # Save to file
+    os.makedirs("test-results", exist_ok=True)
     with open(report_file, "w", encoding="utf-8") as f:
-        f.write("<html><head><title>Link Report</title></head><body>")
-        f.write("<h1>Link Status Report</h1>")
-        f.write(f"<p>Total Links Checked: {len(checked_links)}</p>")
-        f.write(f"<p>✅ Successful: {successful}</p>")
-        f.write(f"<p>❌ Broken: {broken}</p>")
-        f.write(f"<p>⚠️ Errors: {errors}</p><hr>")
+        f.write(rendered_html)
 
-        # Buttons for filtering and CSV
-        f.write("""
-            <button onclick="filterLinks('all')">Show All</button>
-            <button onclick="filterLinks('success')">✅ Passed Only</button>
-            <button onclick="filterLinks('fail')">❌ Failed Only</button>
-            <button onclick="filterLinks('error')">⚠️ Errors Only</button>
-            <button onclick="downloadCSV()">⬇️ Download CSV</button>
-            <hr>
-        """)
-        f.write(scripts)
-
-        # Link list
-        f.write("<ul>")
-        for url, status, note in checked_links:
-            if status == 200:
-                css_class = "success"
-                color = "green"
-            elif status == "ERROR":
-                css_class = "error"
-                color = "orange"
-            else:
-                css_class = "fail"
-                color = "red"
-
-            f.write(f"<li class='{css_class}'><b style='color:{color}'>{status}</b> - <a href='{url}' target='_blank'>{url}</a>: {note}</li>")
-        f.write("</ul></body></html>")
-
-    print(f"\n✅ Detailed report saved to {report_file}")
+    full_path = os.path.abspath(report_file)
+    print(f"\n✅ Detailed report saved to: file://{full_path}")
 
 
 def main():
     parser = argparse.ArgumentParser(description="Link checker")
     parser.add_argument('--url', type=str, help='Starting URL (must include http/https)')
     parser.add_argument('--follow', action='store_true', help='Follow internal links')
-    parser.add_argument('--fail-on-broken', action='store_true', help='Exit with error if any broken or error links found')  # <-- NEW FLAG
+    parser.add_argument('--fail-on-broken', action='store_true', help='Exit with error if any broken or error links found')
 
     args = parser.parse_args()
 

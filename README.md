@@ -41,6 +41,7 @@ Your `requirements.txt` should contain:
 httpx
 beautifulsoup4
 tqdm
+jinja2
 ```
 
 ### Node.js Dependencies
