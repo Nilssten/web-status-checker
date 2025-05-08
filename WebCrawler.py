@@ -14,6 +14,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urlparse
 import logging
 from pathlib import Path
+import aiohttp
 
 log_path = Path("test-results") / "errors.log"
 logging.basicConfig(
@@ -112,8 +113,12 @@ async def crawl_and_check_links(start_url, follow_internal_links=False):
     seen_links = set()
 
     def filter_new_links(links):
-        return [link for link in links if link not in seen_links]
+        return [
+            link for link in links
+            if link not in seen_links and link and not link.lower().startswith("javascript:")
+        ]
 
+    # Step 1: Extract visible <a> links
     links_to_check, error_message = extract_links(start_url)
     if error_message:
         logging.error(f"Error extracting links from {start_url}: {error_message}")
@@ -144,6 +149,48 @@ async def crawl_and_check_links(start_url, follow_internal_links=False):
                     int_note = get_status_notes(int_status_code)
                     checked_links.append((int_link, int_status_code, int_note, 'internal'))
                     logging.info(f"Checked internal {int_link} - {int_status_code} - {int_note}")
+
+    # Step 2: Attempt to fetch and parse sitemap.xml
+    sitemap_url = urljoin(start_url, '/sitemap.xml')
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(sitemap_url) as response:
+                if response.status == 200:
+                    text = await response.text()
+                    soup = BeautifulSoup(text, 'xml')
+                    urls = [loc.text for loc in soup.find_all('loc')]
+                    new_links = filter_new_links(urls)
+                    seen_links.update(new_links)
+
+                    sitemap_results = await check_all_links_async(new_links)
+                    for sm_link, sm_status, sm_error in sitemap_results:
+                        sm_note = get_status_notes(sm_status)
+                        checked_links.append((sm_link, sm_status, sm_note, 'sitemap'))
+                        logging.info(f"Checked sitemap {sm_link} - {sm_status} - {sm_note}")
+                else:
+                    logging.info(f"Sitemap not found at {sitemap_url}, status: {response.status}")
+    except Exception as e:
+        logging.error(f"Error fetching sitemap.xml: {e}")
+
+    # Step 3: Parse form actions
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(start_url) as response:
+                if response.status == 200:
+                    text = await response.text()
+                    soup = BeautifulSoup(text, 'html.parser')
+                    form_actions = [urljoin(start_url, form.get('action')) for form in soup.find_all('form') if
+                                    form.get('action')]
+                    form_links = filter_new_links(form_actions)
+                    seen_links.update(form_links)
+
+                    form_results = await check_all_links_async(form_links)
+                    for form_link, form_status, form_error in form_results:
+                        form_note = get_status_notes(form_status)
+                        checked_links.append((form_link, form_status, form_note, 'form'))
+                        logging.info(f"Checked form {form_link} - {form_status} - {form_note}")
+    except Exception as e:
+        logging.error(f"Error extracting form actions: {e}")
 
     return checked_links
 
