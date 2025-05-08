@@ -38,6 +38,7 @@
         <button class="btn btn-outline-success filter-btn" data-filter="success">✅ 200 OK</button>
         <button class="btn btn-outline-warning filter-btn" data-filter="error">⚠️ Error</button>
         <button class="btn btn-outline-danger filter-btn" data-filter="fail">❌ Broken</button>
+        <button class="btn btn-outline-primary filter-btn" onclick="downloadCSV()">⬇️ Download as CSV</button>
     </div>
 
     <table class="table table-bordered sortable" id="linkTable">
@@ -123,6 +124,31 @@
                 rows.forEach(row => tbody.appendChild(row));
             });
         });
+        function downloadCSV() {
+        const rows = Array.from(document.querySelectorAll('#linkTable tbody tr'));
+        const csvRows = [['Status', 'URL', 'Note', 'Source']];
+
+        rows.forEach(row => {
+            const cols = row.querySelectorAll('td');
+            const status = cols[0].innerText.trim();
+            const url = cols[1].innerText.trim();
+            const note = cols[2].innerText.trim();
+            const source = cols[3].innerText.trim();
+            csvRows.push([status, url, note, source]);
+        });
+
+        const csvContent = csvRows.map(e => e.map(val => `"${val.replace(/"/g, '""')}"`).join(',')).join('\n');
+        const blob = new Blob([csvContent], { type: 'text/csv' });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'link_report.csv';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
     </script>
 </body>
 </html>
