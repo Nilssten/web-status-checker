@@ -12,7 +12,13 @@ import sys
 import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urlparse
+import logging
 
+logging.basicConfig(
+    filename='crawler.log',
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s'
+)
 
 def extract_links(url, attempts=3):
     headers = {
@@ -21,7 +27,7 @@ def extract_links(url, attempts=3):
         'Accept': 'text/html,application/xhtml+xml',
     }
 
-    for _ in range(attempts):
+    for attempt in range(attempts):
         try:
             response = httpx.get(url, headers=headers, timeout=20)
             soup = BeautifulSoup(response.text, 'html.parser')
@@ -31,17 +37,29 @@ def extract_links(url, attempts=3):
                 if href:
                     absolute_url = urljoin(url, href)
                     links.add(absolute_url)
+            logging.info(f"Extracted {len(links)} links from {url}")
             return links, None
         except Exception as e:
-            return set(), str(e)
+            logging.warning(f"Attempt {attempt + 1} failed for {url}: {e}")
+            if attempt == attempts - 1:
+                return set(), str(e)
 
+async def check_link_async(client, link, retries=2):
+    for attempt in range(retries + 1):
+        try:
+            response = await client.head(link, follow_redirects=True, timeout=10)
+            return (link, response.status_code, "")
+        except httpx.ConnectTimeout:
+            error_msg = "ConnectTimeout"
+        except httpx.RequestError as e:
+            error_msg = f"RequestError: {e.__class__.__name__}"
+        except Exception as e:
+            error_msg = f"UnhandledError: {str(e)}"
 
-async def check_link_async(client, link):
-    try:
-        response = await client.head(link, follow_redirects=True, timeout=10)
-        return (link, response.status_code, "")
-    except Exception as e:
-        return (link, "ERROR", str(e))
+        logging.warning(f"Attempt {attempt + 1} failed for {link}: {error_msg}")
+        if attempt == retries:
+            return (link, "ERROR", error_msg)
+        await asyncio.sleep(1)
 
 async def check_all_links_async(links):
     results = []
@@ -80,6 +98,7 @@ async def crawl_and_check_links(start_url, follow_internal_links=False):
 
     links_to_check, error_message = extract_links(start_url)
     if error_message:
+        logging.error(f"Error extracting links from {start_url}: {error_message}")
         print(f"Error extracting links: {error_message}")
         return checked_links
 
@@ -94,8 +113,8 @@ async def crawl_and_check_links(start_url, follow_internal_links=False):
     for link, status_code, error in results:
         note = get_status_notes(status_code)
         checked_links.append((link, status_code, note, 'start_url'))
+        logging.info(f"Checked {link} - {status_code} - {note}")
 
-        # If --follow is set and the link is OK, crawl internal links too
         if follow_internal_links and status_code == 200:
             internal_links, _ = extract_links(link)
             internal_links = filter_new_links(internal_links)
@@ -106,6 +125,7 @@ async def crawl_and_check_links(start_url, follow_internal_links=False):
                 for int_link, int_status_code, int_error in internal_results:
                     int_note = get_status_notes(int_status_code)
                     checked_links.append((int_link, int_status_code, int_note, 'internal'))
+                    logging.info(f"Checked internal {int_link} - {int_status_code} - {int_note}")
 
     return checked_links
 
