@@ -13,11 +13,16 @@ import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.parse import urlparse
 import logging
+from pathlib import Path
 
+log_path = Path("test-results") / "errors.log"
 logging.basicConfig(
-    filename='crawler.log',
     level=logging.INFO,
-    format='%(asctime)s [%(levelname)s] %(message)s'
+    format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.FileHandler("test-results/errors.log", mode='w'),
+        logging.StreamHandler()
+    ]
 )
 
 def extract_links(url, attempts=3):
@@ -186,6 +191,7 @@ def save_html_report(checked_links, filename=None):
 
     full_path = os.path.abspath(report_file)
     print(f"\n✅ Detailed report saved to: file://{full_path}")
+    print(f"🪵 Error log saved to: file://{log_path.resolve()}")
 
 def main():
     parser = argparse.ArgumentParser(description="Link checker")
