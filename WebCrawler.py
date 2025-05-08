@@ -25,6 +25,7 @@ logging.basicConfig(
     ]
 )
 
+
 def extract_links(url, attempts=3):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
@@ -34,7 +35,14 @@ def extract_links(url, attempts=3):
 
     for attempt in range(attempts):
         try:
-            response = httpx.get(url, headers=headers, timeout=20)
+            # Use follow_redirects=True to ensure redirects are followed
+            response = httpx.get(url, headers=headers, timeout=20, follow_redirects=True)
+
+            # Ensure the response content is HTML before parsing with BeautifulSoup
+            if "html" not in response.headers["Content-Type"]:
+                logging.warning(f"Non-HTML content received from {url}. Skipping link extraction.")
+                return set(), "Non-HTML content"
+
             soup = BeautifulSoup(response.text, 'html.parser')
             links = set()
             for link in soup.find_all('a'):
@@ -42,10 +50,16 @@ def extract_links(url, attempts=3):
                 if href:
                     absolute_url = urljoin(url, href)
                     links.add(absolute_url)
+
             logging.info(f"Extracted {len(links)} links from {url}")
             return links, None
+
+        except httpx.RequestError as e:
+            logging.warning(f"Request failed for {url}: {str(e)}")
+            if attempt == attempts - 1:
+                return set(), str(e)
         except Exception as e:
-            logging.warning(f"Attempt {attempt + 1} failed for {url}: {e}")
+            logging.warning(f"Error extracting links from {url}: {str(e)}")
             if attempt == attempts - 1:
                 return set(), str(e)
 
@@ -66,6 +80,7 @@ async def check_link_async(client, link, retries=2):
             return (link, "ERROR", error_msg)
         await asyncio.sleep(1)
 
+# Improved function for checking all links concurrently
 async def check_all_links_async(links):
     results = []
     async with httpx.AsyncClient(http2=True, timeout=10) as client:
@@ -74,7 +89,6 @@ async def check_all_links_async(links):
             result = await coro
             results.append(result)
     return results
-
 
 def get_status_notes(status_code):
     status_notes = {
@@ -92,7 +106,6 @@ def get_status_notes(status_code):
         "ERROR": "An error occurred while checking the link."
     }
     return status_notes.get(status_code, "Unexpected status code.")
-
 
 async def crawl_and_check_links(start_url, follow_internal_links=False):
     checked_links = []
@@ -143,7 +156,6 @@ def save_html_report(checked_links, filename=None):
     errors = sum(1 for _, code, _, _ in checked_links if code == "ERROR")
     broken = sum(1 for _, code, _, _ in checked_links if code != 200 and code != "ERROR")
 
-    # Prepare CSV content
     csv_content = "URL,Status,Note,Source\n"
 
     # Prepare structured data for rendering
