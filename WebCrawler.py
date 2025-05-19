@@ -65,9 +65,18 @@ def extract_links(url, attempts=3):
                 return set(), str(e)
 
 async def check_link_async(client, link, retries=2):
+    binary_extensions = [".pdf", ".zip", ".docx", ".xlsx", ".pptx", ".png", ".jpg", ".jpeg", ".gif"]
+    is_binary_file = any(link.lower().endswith(ext) for ext in binary_extensions)
+
     for attempt in range(retries + 1):
         try:
-            response = await client.head(link, follow_redirects=True, timeout=10)
+            if is_binary_file:
+                # Use GET for known binary file types
+                response = await client.get(link, follow_redirects=True, timeout=10)
+            else:
+                # Use HEAD for everything else
+                response = await client.head(link, follow_redirects=True, timeout=10)
+
             return (link, response.status_code, "")
         except httpx.ConnectTimeout:
             error_msg = "ConnectTimeout"
