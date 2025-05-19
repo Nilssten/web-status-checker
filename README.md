@@ -49,7 +49,7 @@ Install Node.js (v16+ recommended), then install Playwright:
 
 ```bash
 npm install -D @playwright/test
-npx playwright inst
+npx playwright install
 ```
 ---
 

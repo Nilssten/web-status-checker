@@ -3,3 +3,4 @@ beautifulsoup4
 tqdm
 jinja2
 aiohttp
+httpx[http2]

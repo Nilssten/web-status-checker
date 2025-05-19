@@ -81,7 +81,6 @@ async def check_link_async(client, link, retries=2):
             return (link, "ERROR", error_msg)
         await asyncio.sleep(1)
 
-# Improved function for checking all links concurrently
 async def check_all_links_async(links):
     results = []
     async with httpx.AsyncClient(http2=True, timeout=10) as client:

@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Enhanced functionality">
+    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Improved and enhanced functionality for crawl_and_check_links">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebCrawler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +251,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746700523410</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Improved and enhanced functionality for crawl_and_check_links">
+      <option name="closed" value="true" />
+      <created>1746702001773</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1746702001773</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -273,6 +280,7 @@
     <MESSAGE value="Added errors.log for storing error details" />
     <MESSAGE value="Re-added download as csv option in html report" />
     <MESSAGE value="Enhanced functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Enhanced functionality" />
+    <MESSAGE value="Improved and enhanced functionality for crawl_and_check_links" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved and enhanced functionality for crawl_and_check_links" />
   </component>
 </project>
