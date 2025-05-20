@@ -75,8 +75,12 @@ python webcrawler.py --url https://testpages.herokuapp.com/ --follow
 2. (Optional) Create and activate a virtual environment
 3. Run webcrawler.py via the built-in terminal or Run menu
 If no arguments are provided, it will prompt you for:
+
 	•	A starting URL
+
 	•	Whether to follow internal links (yes / no)
+
+    •	Whether to fail if broken links are found (yes / no)
 
 If you're using Miniconda inside PyCharm, make sure:
 - Your project interpreter is set to the correct Conda environment
