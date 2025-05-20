@@ -18,6 +18,8 @@ from pathlib import Path
 import aiohttp
 
 log_path = Path("test-results/errors.log")
+
+
 class LinkChecker:
     def extract_links(self, url, attempts=3):
         headers = {
@@ -288,6 +290,7 @@ async def main():
                 sys.exit(1)
     else:
         print("No links found or an error occurred.")
+
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)

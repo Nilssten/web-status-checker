@@ -134,6 +134,17 @@ To run the type checker:
 ```bash
 mypy --explicit-package-bases .
 ```
+
+### Optional: Custom PEP8 Style Rules
+
+This project uses a `setup.cfg` file to define custom code style rules for `pycodestyle`.
+
+To run it:
+
+```bash
+pip install pycodestyle
+pycodestyle .
+```
 ---
 
 ## 📦 Optional: Run in Docker
