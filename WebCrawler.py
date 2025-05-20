@@ -97,8 +97,8 @@ class LinkChecker:
                 results.append(result)
         return results
 
-    def get_status_notes(self, status_code):
-        status_notes = {
+    def get_status_notes(self, status_code: int) -> str:
+        status_notes: Dict[Union[int,str], str] = {
             200: "OK: The request was successful.",
             400: "Bad Request: Invalid syntax.",
             403: "Forbidden: Access denied.",
