@@ -16,6 +16,18 @@ from urllib.parse import urlparse
 import logging
 from pathlib import Path
 import aiohttp
+import json
+from dataclasses import dataclass
+from dataclasses_json import dataclass_json
+
+@dataclass_json
+@dataclass
+class LinkInfo:
+    url: str
+    status_code: int
+    source_type: str
+    source_url: str
+    note: str
 
 log_path = Path("test-results/errors.log")
 
@@ -141,7 +153,13 @@ class LinkChecker:
 
         for link, status_code, error in results:
             note = self.get_status_notes(status_code)
-            checked_links.append((link, status_code, note, 'start_url'))
+            checked_links.append(LinkInfo(
+                url=link,
+                status_code=status_code,
+                note=note,
+                source_type='link',
+                source_url=start_url
+            ))
             logging.info(f"Checked {link} - {status_code} - {note}")
 
             if follow_internal_links and status_code == 200:
@@ -153,7 +171,13 @@ class LinkChecker:
                     internal_results = await self.check_all_links_async(internal_links)
                     for int_link, int_status_code, int_error in internal_results:
                         int_note = self.get_status_notes(int_status_code)
-                        checked_links.append((int_link, int_status_code, int_note, 'internal'))
+                        checked_links.append(LinkInfo(
+                            url=int_link,
+                            status_code=int_status_code,
+                            note=int_note,
+                            source_type='link',
+                            source_url=link
+                        ))
                         logging.info(f"Checked internal {int_link} - {int_status_code} - {int_note}")
 
         # Step 2: Attempt to fetch and parse sitemap.xml
@@ -171,7 +195,13 @@ class LinkChecker:
                         sitemap_results = await self.check_all_links_async(new_links)
                         for sm_link, sm_status, sm_error in sitemap_results:
                             sm_note = self.get_status_notes(sm_status)
-                            checked_links.append((sm_link, sm_status, sm_note, 'sitemap'))
+                            checked_links.append(LinkInfo(
+                                url=sm_link,
+                                status_code=sm_status,
+                                note=sm_note,
+                                source_type='sitemap',
+                                source_url=start_url
+                            ))
                             logging.info(f"Checked sitemap {sm_link} - {sm_status} - {sm_note}")
                     else:
                         logging.info(f"Sitemap not found at {sitemap_url}, status: {response.status}")
@@ -193,32 +223,37 @@ class LinkChecker:
                         form_results = await self.check_all_links_async(form_links)
                         for form_link, form_status, form_error in form_results:
                             form_note = self.get_status_notes(form_status)
-                            checked_links.append((form_link, form_status, form_note, 'form'))
+                            checked_links.append(LinkInfo(
+                                url=form_link,
+                                status_code=form_status,
+                                note=form_note,
+                                source_type='form',
+                                source_url=start_url
+                            ))
                             logging.info(f"Checked form {form_link} - {form_status} - {form_note}")
         except Exception as e:
             logging.error(f"Error extracting form actions: {e}")
 
         return checked_links
 
-    def save_html_report(self, checked_links, filename=None):
+    def save_html_report(self, checked_links: list[LinkInfo], filename=None):
         now = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
         report_file = filename or f"test-results/link_report_{now}.html"
 
         # Count stats
-        successful = sum(1 for _, code, _, _ in checked_links if code == 200)
-        errors = sum(1 for _, code, _, _ in checked_links if code == "ERROR")
-        broken = sum(1 for _, code, _, _ in checked_links if code != 200 and code != "ERROR")
+        successful = sum(1 for link in checked_links if link.status_code == 200)
+        errors = sum(1 for link in checked_links if link.status_code == "ERROR")
+        broken = sum(1 for link in checked_links if link.status_code != 200 and link.status_code != "ERROR")
 
-        csv_content = "URL,Status,Note,Source\n"
+        csv_content = "URL,Status,SourceType,SourceURL\n"
 
-        # Prepare structured data for rendering
         render_links = []
-        for url, status, note, source in checked_links:
-            safe_note = note.replace(",", " ").replace("\n", " ")
-            csv_content += f'"{url}",{status},"{safe_note}",{source}\n'
+        for link in checked_links:
+            safe_note = self.get_status_notes(link.status_code).replace(",", " ").replace("\n", " ")
+            csv_content += f'"{link.url}",{link.status_code},"{safe_note}","{link.source_url}"\n'
 
-            domain = urlparse(url).netloc
-            source_domain = urlparse(source).netloc
+            domain = urlparse(link.url).netloc
+            source_domain = urlparse(link.source_url).netloc
             if ".gov" in domain or ".edu" in domain:
                 source_class = "trusted"
             elif domain == source_domain:
@@ -227,18 +262,17 @@ class LinkChecker:
                 source_class = ""
 
             render_links.append({
-                "url": url,
-                "status": status,
-                "note": note,
-                "source": source,
+                "url": link.url,
+                "status": link.status_code,
+                "note": safe_note,
+                "source": link.source_url,
                 "class": source_class
             })
 
-        # Set up Jinja2
+        # Jinja2 templating
         env = Environment(loader=FileSystemLoader('templates'))
         template = env.get_template('report.html')
 
-        # Render HTML template
         rendered_html = template.render(
             total=len(checked_links),
             successful=successful,
@@ -248,7 +282,7 @@ class LinkChecker:
             csv_content=csv_content,
             timestamp=now
         )
-        # Save to file
+
         os.makedirs("test-results", exist_ok=True)
         with open(report_file, "w", encoding="utf-8") as f:
             f.write(rendered_html)
@@ -257,6 +291,11 @@ class LinkChecker:
         print(f"\n✅ Detailed report saved to: file://{full_path}")
         print(f"🪵 Error log saved to: file://{log_path.resolve()}")
 
+    def save_json_report(self, checked_links: list[LinkInfo], filename="test-results/link_info.json"):
+        os.makedirs("test-results", exist_ok=True)
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump([link.to_dict() for link in checked_links], f, indent=2, ensure_ascii=False)
+        print(f"📝 JSON report saved to: file://{os.path.abspath(filename)}")
 
 async def main():
     parser = argparse.ArgumentParser(description="Link checker")
@@ -281,7 +320,8 @@ async def main():
     result = await checker.crawl_and_check_links(start_url, follow_internal_links=follow_internal)
 
     if result:
-        checker.save_html_report(result)  # Call save_html_report on your instance
+        checker.save_html_report(result)  # Generate HTML report
+        checker.save_json_report(result)  # <-- Save JSON file
 
         if fail_on_broken:
             broken_count = sum(1 for _, code, _, _ in result if code != 200 and code != "ERROR")
