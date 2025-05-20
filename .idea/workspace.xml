@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Use dataclasses for link info; add JSON report" />
+    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="updated README">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/.last-run.json" beforeDir="false" afterPath="$PROJECT_DIR$/test-results/.last-run.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/webcrawler.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tests/webcrawler.spec.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -320,11 +324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1747727014176</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="updated README">
+      <option name="closed" value="true" />
+      <created>1747727221454</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1747727221454</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Playwright integration and the command-line interface improvements to webcrawler.py,&#10;Updated readme file" />
     <MESSAGE value="Implemented better result filtering with javascript, added extra info in readme" />
     <MESSAGE value="Added Download as csv button functionality in the generated html results file" />
     <MESSAGE value="Implemented exit codes for CI/CD or scripting" />
@@ -349,6 +360,7 @@
     <MESSAGE value="Improved pycodestyle" />
     <MESSAGE value="Improved get_status_notes function for mypy" />
     <MESSAGE value="Use dataclasses for link info; add JSON report" />
-    <option name="LAST_COMMIT_MESSAGE" value="Use dataclasses for link info; add JSON report" />
+    <MESSAGE value="updated README" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated README" />
   </component>
 </project>
