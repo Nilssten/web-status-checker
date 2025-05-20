@@ -126,9 +126,37 @@ class LinkChecker:
         }
         return status_notes.get(status_code, "Unexpected status code.")
 
-    async def crawl_and_check_links(self, start_url, follow_internal_links=False):
+    async def crawl_recursive(self, url, current_depth, max_depth, seen_links, checked_links):
+        if current_depth > max_depth:
+            return
+
+        internal_links, _ = self.extract_links(url)
+        internal_links = [
+            link for link in internal_links
+            if link not in seen_links and link and not link.lower().startswith("javascript:")
+        ]
+        seen_links.update(internal_links)
+
+        if internal_links:
+            internal_results = await self.check_all_links_async(internal_links)
+            for link, status, error in internal_results:
+                note = self.get_status_notes(status)
+                checked_links.append(LinkInfo(
+                    url=link,
+                    status_code=status,
+                    note=note,
+                    source_type='link',
+                    source_url=url
+                ))
+                logging.info(f"Checked internal {link} - {status} - {note}")
+
+                if status == 200:
+                    await self.crawl_recursive(link, current_depth + 1, max_depth, seen_links, checked_links)
+
+    async def crawl_and_check_links(self, start_url, follow_internal_links=False, max_depth=1):
         checked_links = []
         seen_links = set()
+        seen_links.add(start_url)
 
         def filter_new_links(links):
             return [
@@ -162,23 +190,9 @@ class LinkChecker:
             ))
             logging.info(f"Checked {link} - {status_code} - {note}")
 
-            if follow_internal_links and status_code == 200:
-                internal_links, _ = self.extract_links(link)
-                internal_links = filter_new_links(internal_links)
-                seen_links.update(internal_links)
-
-                if internal_links:
-                    internal_results = await self.check_all_links_async(internal_links)
-                    for int_link, int_status_code, int_error in internal_results:
-                        int_note = self.get_status_notes(int_status_code)
-                        checked_links.append(LinkInfo(
-                            url=int_link,
-                            status_code=int_status_code,
-                            note=int_note,
-                            source_type='link',
-                            source_url=link
-                        ))
-                        logging.info(f"Checked internal {int_link} - {int_status_code} - {int_note}")
+        if follow_internal_links:
+            await self.crawl_recursive(start_url, current_depth=1, max_depth=max_depth, seen_links=seen_links,
+                                       checked_links=checked_links)
 
         # Step 2: Attempt to fetch and parse sitemap.xml
         sitemap_url = urljoin(start_url, '/sitemap.xml')
@@ -302,6 +316,7 @@ async def main():
     parser.add_argument('--url', type=str, help='Starting URL (must include http/https)')
     parser.add_argument('--follow', action='store_true', help='Follow internal links')
     parser.add_argument('--fail-on-broken', action='store_true', help='Exit with error if any broken or error links found')
+    parser.add_argument('--max-depth', type=int, help='Maximum depth for internal link crawling')
 
     args = parser.parse_args()
 
@@ -311,8 +326,30 @@ async def main():
         fail_on_broken = args.fail_on_broken
     else:
         start_url = input("Enter the starting URL (must include http/https): ").strip()
-        follow_internal = input("Would you like to follow internal links? (yes/no): ").strip().lower() in ["yes", "y"]
-        fail_on_broken = input("Fail if broken links are found? (yes/no): ").strip().lower() in ["yes", "y"]
+        follow_input = input("Would you like to follow internal links? (yes/no): ").strip().lower()
+        follow_internal = follow_input in ["yes", "y"]
+        fail_input = input("Fail if broken links are found? (yes/no): ").strip().lower()
+        fail_on_broken = fail_input in ["yes", "y"]
+
+    max_depth = args.max_depth
+
+    # Ask for max depth only if following internal links
+    if follow_internal:
+        if max_depth is None:
+            try:
+                max_depth = int(input("Enter max crawl depth (e.g., 2): "))
+            except ValueError:
+                print("Invalid input. Using default depth of 1.")
+                max_depth = 1
+    else:
+        max_depth = 0  # Not used, but explicitly set
+
+    checker = LinkChecker()
+    checked_links = await checker.crawl_and_check_links(
+        start_url,
+        follow_internal_links=follow_internal,
+        max_depth=max_depth
+    )
 
     checker = LinkChecker()  # Create an instance of your class
 

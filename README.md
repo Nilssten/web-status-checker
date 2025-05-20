@@ -105,20 +105,26 @@ Ensure python3 points to the correct environment or adjust to python based on yo
 
 You can pass arguments directly to skip prompts, useful for automated tests or scripting:
 
-| Argument           | Description                                           | Example                       |
-|--------------------|-------------------------------------------------------|-------------------------------|
-| `--url`            | Starting URL to crawl (must include http/https)      | `--url https://linkedin.com`  |
-| `--follow`         | Follow internal links found during crawling           | `--follow`                    |
-| `--fail-on-broken` | Exit with code 1 if any link fails (for CI pipelines)           | `--fail-on-broken`                            |
+| Argument         | Description                                           | Example                      |
+|------------------|-------------------------------------------------------|------------------------------|
+| `--url`          | Starting URL to crawl (must include http/https)      | `--url https://linkedin.com` |
+| `--follow`       | Follow internal links found during crawling           | `--follow`                   |
+| `--max-depth` | Maximum crawl depth for internal links (only used if --follow is set)           | `--max-depth 2`  |
+| `--fail-on-broken` | Exit with code 1 if any link fails (for CI pipelines)           | `--fail-on-broken` |
+
 
 ### 🔧 Example usage:
 ```bash
-python3 webcrawler.py --url https://testpages.herokuapp.com/ --follow --fail-on-broken
+python3 webcrawler.py --url https://testpages.herokuapp.com/ --follow --max-depth 2 --fail-on-broken
 ```
-✅ Use echo $? (macOS/Linux) or echo %ERRORLEVEL% (Windows) after running to check the exit code.
+> 💡 **Note:**
+> - If `--follow` is **not** set, the `--max-depth` argument is **ignored**.
+> - In interactive mode, you will only be prompted for crawl depth **if** you choose to follow internal links.
 
-* If `--url` is provided, the script **won’t prompt you** for input. Use `--follow` if you want to crawl internal pages as well.
-* If `--fail-on-broken` is set, the script **will return exit code 1** when broken or failed links are found — useful for CI/CD and monitoring workflows.
+✅ **Tip:** Use `echo $?` (macOS/Linux) or `echo %ERRORLEVEL%` (Windows) after running the script to check the exit code.
+
+* If `--url` is provided, the script **won’t prompt** you for interactive input. Use `--follow` to enable internal crawling.
+* If `--fail-on-broken` is set, the script will **return exit code 1** when broken or failed links are found — useful for CI/CD and monitoring workflows.
 ---
 
 
