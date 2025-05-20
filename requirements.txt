@@ -6,3 +6,4 @@ aiohttp
 httpx[http2]
 lxml
 html5lib
+mypy

@@ -117,6 +117,25 @@ python3 webcrawler.py --url https://testpages.herokuapp.com/ --follow --fail-on-
 * If `--fail-on-broken` is set, the script **will return exit code 1** when broken or failed links are found — useful for CI/CD and monitoring workflows.
 ---
 
+
+## 🧪 Static Typing & Code Quality
+
+This project uses [mypy](https://mypy-lang.org/) for static type checking.  
+It helps detect potential bugs early, enforces better type annotations, and improves long-term maintainability.
+
+### 📋 Running mypy
+
+Install `mypy` if you haven’t already:
+
+```bash
+pip install mypy
+```
+To run the type checker:
+```bash
+mypy --explicit-package-bases .
+```
+---
+
 ## 📦 Optional: Run in Docker
 
 ### Create a Dockerfile
