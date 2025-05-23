@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "web-status-checker"
+version = "0.1.0"
+description = "Asynchronous website link checker"
+authors = [{ name="Nils Stenkevics", email="nils22007488@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.7"
+license = { text = "MIT" }
+dependencies = [
+    "httpx",
+    "beautifulsoup4",
+    "dataclasses-json",
+    "tqdm",
+    "jinja2",
+    "aiohttp",
+    "httpx[http2]",
+    "lxml",
+    "html5lib",
+    "mypy"
+]
+
+[tool.setuptools.packages.find]
+where = ["web_status_checker"]

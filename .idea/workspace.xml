@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Added commented example for passing CLI flags in Playwright test">
+    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Added new CLI argument: --max-depth">
+      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_status_checker/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/WebCrawler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_status_checker/WebCrawler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +56,11 @@
     &quot;last_opened_file_path&quot;: &quot;/Users/nilsstenkevics/PycharmProjects/WebStatusChecker&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web_status_checker" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="WebCrawler" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SelfLearningQA" />
@@ -70,7 +76,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WebCrawler.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web_status_checker/WebCrawler.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -340,11 +346,18 @@
       <option name="project" value="LOCAL" />
       <updated>1747727883493</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Added new CLI argument: --max-depth">
+      <option name="closed" value="true" />
+      <created>1747751532866</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1747751532866</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Download as csv button functionality in the generated html results file" />
     <MESSAGE value="Implemented exit codes for CI/CD or scripting" />
     <MESSAGE value="Updated README file" />
     <MESSAGE value="Improve performance with multithreaded link checking and tqdm progress bar" />
@@ -369,6 +382,7 @@
     <MESSAGE value="Use dataclasses for link info; add JSON report" />
     <MESSAGE value="updated README" />
     <MESSAGE value="Added commented example for passing CLI flags in Playwright test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added commented example for passing CLI flags in Playwright test" />
+    <MESSAGE value="Added new CLI argument: --max-depth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new CLI argument: --max-depth" />
   </component>
 </project>
