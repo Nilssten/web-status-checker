@@ -1,0 +1,223 @@
+2025-05-08 11:10:31,356 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/ "HTTP/1.1 200 OK"
+2025-05-08 11:10:31,366 [INFO] Extracted 18 links from https://www.deadlinkchecker.com/
+2025-05-08 11:10:31,858 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/ "HTTP/2 200 OK"
+2025-05-08 11:10:32,036 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/about.asp#contact "HTTP/2 200 OK"
+2025-05-08 11:10:32,058 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/terms.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,058 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/faq.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,059 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/createaccount.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,060 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/automatic-broken-link-check.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,071 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/reports.asp "HTTP/2 302 Found"
+2025-05-08 11:10:32,073 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/sitemap.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,074 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/accountsettings.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,075 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/error-codes.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,075 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/website-link-checker-options.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,114 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/multiple-websites-broken-link-check.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,114 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/about.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,164 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/login.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,192 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/website-dead-link-checker.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,192 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/multisite.asp "HTTP/2 302 Found"
+2025-05-08 11:10:32,238 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/ "HTTP/2 200 OK"
+2025-05-08 11:10:32,299 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/login.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,459 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/p/free-resources.html "HTTP/2 200 OK"
+2025-05-08 11:10:32,535 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/multiple-websites-broken-link-check.asp "HTTP/2 200 OK"
+2025-05-08 11:10:32,536 [INFO] Checked https://blog.deadlinkchecker.com/ - 200 - OK: The request was successful.
+2025-05-08 11:10:32,935 [INFO] HTTP Request: GET https://blog.deadlinkchecker.com/ "HTTP/1.1 200 OK"
+2025-05-08 11:10:32,971 [INFO] Extracted 49 links from https://blog.deadlinkchecker.com/
+2025-05-08 11:10:32,984 [WARNING] Attempt 1 failed for javascript:void(0): RequestError: UnsupportedProtocol
+2025-05-08 11:10:33,090 [INFO] HTTP Request: HEAD https://plus.google.com/u/0/+DeadLinkCheckerTool/ "HTTP/2 301 Moved Permanently"
+2025-05-08 11:10:33,148 [INFO] HTTP Request: HEAD https://linkedin.com/company/dead-link-checker "HTTP/2 301 Moved Permanently"
+2025-05-08 11:10:33,168 [INFO] HTTP Request: HEAD https://twitter.com/deadlinkchecker "HTTP/2 403 Forbidden"
+2025-05-08 11:10:33,185 [INFO] HTTP Request: HEAD https://www.blogger.com "HTTP/2 302 Found"
+2025-05-08 11:10:33,277 [INFO] HTTP Request: HEAD https://accounts.google.com/ServiceLogin?passive=true&go=true&service=blogger&continue=https://www.blogger.com/?bpli%3D1 "HTTP/2 302 Found"
+2025-05-08 11:10:33,336 [INFO] HTTP Request: HEAD https://workspaceupdates.googleblog.com/2023/04/new-community-features-for-google-chat-and-an-update-currents%20.html "HTTP/2 200 OK"
+2025-05-08 11:10:33,501 [INFO] HTTP Request: HEAD https://www.linkedin.com/company/dead-link-checker "HTTP/2 200 OK"
+2025-05-08 11:10:33,534 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/resources/maintaining-seo-friendly-website.pdf "HTTP/2 200 OK"
+2025-05-08 11:10:33,536 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/images/idn.png "HTTP/2 200 OK"
+2025-05-08 11:10:33,538 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/resources/error-code-infographic.png "HTTP/2 200 OK"
+2025-05-08 11:10:33,539 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/resources/user-experience-checklist.pdf "HTTP/2 200 OK"
+2025-05-08 11:10:33,800 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=7565794060172427795&target=email "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:33,804 [INFO] HTTP Request: HEAD https://www.blogger.com/ "HTTP/2 302 Found"
+2025-05-08 11:10:33,805 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=7565794060172427795&target=facebook "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:33,805 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=7565794060172427795&target=blog "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:33,806 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=8149155748686126957&target=blog "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:33,806 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=8149155748686126957&target=facebook "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:33,807 [INFO] HTTP Request: HEAD https://www.blogger.com/?bpli=1 "HTTP/2 302 Found"
+2025-05-08 11:10:33,807 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=8149155748686126957&target=twitter "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:33,809 [INFO] HTTP Request: HEAD https://www.blogger.com/post-edit.g?blogID=950052209208942952&postID=7565794060172427795&from=pencil "HTTP/2 302 Found"
+2025-05-08 11:10:33,810 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=7565794060172427795&target=twitter "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:33,811 [INFO] HTTP Request: HEAD https://www.blogger.com/post-edit.g?blogID=950052209208942952&postID=8149155748686126957&from=pencil "HTTP/2 302 Found"
+2025-05-08 11:10:33,812 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=8149155748686126957&target=pinterest "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:33,812 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=7565794060172427795&target=pinterest "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:33,813 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=8149155748686126957&target=email "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:33,820 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2018/ "HTTP/2 200 OK"
+2025-05-08 11:10:33,826 [INFO] HTTP Request: HEAD https://www.blogger.com/about?bpli=1 "HTTP/2 301 Moved Permanently"
+2025-05-08 11:10:33,838 [INFO] HTTP Request: HEAD https://accounts.google.com/ServiceLogin?passive=true&go=true&service=blogger&continue=https://www.blogger.com/?bpli%3D1 "HTTP/2 302 Found"
+2025-05-08 11:10:33,844 [INFO] HTTP Request: HEAD https://accounts.google.com/ServiceLogin?service=blogger&passive=1209600&continue=https://www.blogger.com/post-edit.g?blogID%3D950052209208942952%26postID%3D7565794060172427795%26from%3Dpencil&followup=https://www.blogger.com/post-edit.g?blogID%3D950052209208942952%26postID%3D7565794060172427795%26from%3Dpencil "HTTP/2 302 Found"
+2025-05-08 11:10:33,844 [INFO] HTTP Request: HEAD https://accounts.google.com/ServiceLogin?service=blogger&passive=1209600&continue=https://www.blogger.com/post-edit.g?blogID%3D950052209208942952%26postID%3D8149155748686126957%26from%3Dpencil&followup=https://www.blogger.com/post-edit.g?blogID%3D950052209208942952%26postID%3D8149155748686126957%26from%3Dpencil "HTTP/2 302 Found"
+2025-05-08 11:10:33,855 [INFO] HTTP Request: HEAD https://www.blogger.com/about/?bpli=1 "HTTP/2 200 OK"
+2025-05-08 11:10:33,866 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2017/ "HTTP/2 200 OK"
+2025-05-08 11:10:33,867 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/feeds/posts/default "HTTP/2 200 OK"
+2025-05-08 11:10:33,868 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2016/12/ "HTTP/2 200 OK"
+2025-05-08 11:10:33,868 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/search?updated-max=2017-09-26T08:57:00-07:00&max-results=2 "HTTP/2 200 OK"
+2025-05-08 11:10:33,869 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2016/10/ "HTTP/2 200 OK"
+2025-05-08 11:10:33,869 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2016/ "HTTP/2 200 OK"
+2025-05-08 11:10:33,869 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2017/09/dead-link-checker-change-of-ownership.html "HTTP/2 200 OK"
+2025-05-08 11:10:33,869 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2018/09/idn-internationalized-domain-names.html "HTTP/2 200 OK"
+2025-05-08 11:10:33,870 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2018/09/idn-internationalized-domain-names.html#more "HTTP/2 200 OK"
+2025-05-08 11:10:33,870 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2016/07/ "HTTP/2 200 OK"
+2025-05-08 11:10:33,870 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2016/09/ "HTTP/2 200 OK"
+2025-05-08 11:10:33,871 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2017/09/ "HTTP/2 200 OK"
+2025-05-08 11:10:33,871 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2016/11/ "HTTP/2 200 OK"
+2025-05-08 11:10:33,872 [INFO] HTTP Request: HEAD https://blog.deadlinkchecker.com/2018/09/ "HTTP/2 200 OK"
+2025-05-08 11:10:33,889 [INFO] HTTP Request: HEAD https://accounts.google.com/InteractiveLogin?continue=https://www.blogger.com/post-edit.g?blogID%3D950052209208942952%26postID%3D7565794060172427795%26from%3Dpencil&followup=https://www.blogger.com/post-edit.g?blogID%3D950052209208942952%26postID%3D7565794060172427795%26from%3Dpencil&passive=1209600&service=blogger&ifkv=ASKV5Mig90EieyrN-4kAK-sY7-42KeSxDstrdCL8onaGWyp1aMHfra4C79DXYcAs4N4C5Rvx48MzxQ "HTTP/2 302 Found"
+2025-05-08 11:10:33,892 [INFO] HTTP Request: HEAD https://accounts.google.com/InteractiveLogin?continue=https://www.blogger.com/post-edit.g?blogID%3D950052209208942952%26postID%3D8149155748686126957%26from%3Dpencil&followup=https://www.blogger.com/post-edit.g?blogID%3D950052209208942952%26postID%3D8149155748686126957%26from%3Dpencil&passive=1209600&service=blogger&ifkv=ASKV5MjmavaJdYyhNAHVNZO-bYJAs9lJqYXl2ml1IqO1xF1UJbuf0qh9eddmMeF-oRx2faGyr_pb5A "HTTP/2 302 Found"
+2025-05-08 11:10:33,895 [INFO] HTTP Request: HEAD https://www.blogger.com/?bpli=1 "HTTP/2 302 Found"
+2025-05-08 11:10:33,916 [INFO] HTTP Request: HEAD https://www.blogger.com/about?bpli=1 "HTTP/2 301 Moved Permanently"
+2025-05-08 11:10:33,960 [INFO] HTTP Request: HEAD https://www.blogger.com/about/?bpli=1 "HTTP/2 200 OK"
+2025-05-08 11:10:33,982 [INFO] HTTP Request: HEAD https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.blogger.com%2Fpost-edit.g%3FblogID%3D950052209208942952%26postID%3D7565794060172427795%26from%3Dpencil&followup=https%3A%2F%2Fwww.blogger.com%2Fpost-edit.g%3FblogID%3D950052209208942952%26postID%3D7565794060172427795%26from%3Dpencil&ifkv=ASKV5Mic6lljtUoeEDjpeLUh2OKzfHv6sMziUCOLknljQU-vHyZd6Onnc7x_mjrnZKyNcQapz32o8g&passive=1209600&service=blogger&flowName=WebLiteSignIn&flowEntry=ServiceLogin&dsh=S890609581%3A1746691833890365 "HTTP/2 200 OK"
+2025-05-08 11:10:33,984 [WARNING] Attempt 2 failed for javascript:void(0): UnhandledError: unknown url type: '/void(0)'
+2025-05-08 11:10:34,003 [INFO] HTTP Request: HEAD https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.blogger.com%2Fpost-edit.g%3FblogID%3D950052209208942952%26postID%3D8149155748686126957%26from%3Dpencil&followup=https%3A%2F%2Fwww.blogger.com%2Fpost-edit.g%3FblogID%3D950052209208942952%26postID%3D8149155748686126957%26from%3Dpencil&ifkv=ASKV5MiKp79t-i4adN3RVn1cY510sU6JXCtuA7ucr2PNboAAjm32YWlypvOOWrTSupijbIh22Qo5FQ&passive=1209600&service=blogger&flowName=WebLiteSignIn&flowEntry=ServiceLogin&dsh=S1913702728%3A1746691833895417 "HTTP/2 200 OK"
+2025-05-08 11:10:34,988 [WARNING] Attempt 3 failed for javascript:void(0): UnhandledError: unknown url type: '/void(0)'
+2025-05-08 11:10:34,992 [INFO] Checked internal https://twitter.com/deadlinkchecker - 403 - Forbidden: Access denied.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://plus.google.com/u/0/+DeadLinkCheckerTool/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://linkedin.com/company/dead-link-checker - 200 - OK: The request was successful.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.deadlinkchecker.com/resources/maintaining-seo-friendly-website.pdf - 200 - OK: The request was successful.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.deadlinkchecker.com/images/idn.png - 200 - OK: The request was successful.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.deadlinkchecker.com/resources/error-code-infographic.png - 200 - OK: The request was successful.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.deadlinkchecker.com/resources/user-experience-checklist.pdf - 200 - OK: The request was successful.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=7565794060172427795&target=email - 405 - Unexpected status code.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=7565794060172427795&target=facebook - 405 - Unexpected status code.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=7565794060172427795&target=blog - 405 - Unexpected status code.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=8149155748686126957&target=blog - 405 - Unexpected status code.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=8149155748686126957&target=facebook - 405 - Unexpected status code.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=8149155748686126957&target=twitter - 405 - Unexpected status code.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=7565794060172427795&target=twitter - 405 - Unexpected status code.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=8149155748686126957&target=pinterest - 405 - Unexpected status code.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=7565794060172427795&target=pinterest - 405 - Unexpected status code.
+2025-05-08 11:10:34,992 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&postID=8149155748686126957&target=email - 405 - Unexpected status code.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2018/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://www.blogger.com - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2017/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/feeds/posts/default - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2016/12/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/search?updated-max=2017-09-26T08:57:00-07:00&max-results=2 - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2016/10/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2016/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2017/09/dead-link-checker-change-of-ownership.html - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2018/09/idn-internationalized-domain-names.html - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2018/09/idn-internationalized-domain-names.html#more - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2016/07/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2016/09/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2017/09/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2016/11/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://blog.deadlinkchecker.com/2018/09/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://www.blogger.com/ - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://www.blogger.com/post-edit.g?blogID=950052209208942952&postID=7565794060172427795&from=pencil - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal https://www.blogger.com/post-edit.g?blogID=950052209208942952&postID=8149155748686126957&from=pencil - 200 - OK: The request was successful.
+2025-05-08 11:10:34,993 [INFO] Checked internal javascript:void(0) - ERROR - An error occurred while checking the link.
+2025-05-08 11:10:34,993 [INFO] Checked https://www.deadlinkchecker.com/about.asp#contact - 200 - OK: The request was successful.
+2025-05-08 11:10:35,551 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/about.asp#contact "HTTP/1.1 200 OK"
+2025-05-08 11:10:35,562 [INFO] Extracted 21 links from https://www.deadlinkchecker.com/about.asp#contact
+2025-05-08 11:10:35,636 [INFO] HTTP Request: HEAD http://en.wikipedia.org/wiki/Link_rot "HTTP/1.1 301 Moved Permanently"
+2025-05-08 11:10:35,746 [INFO] HTTP Request: HEAD https://en.wikipedia.org/wiki/Link_rot "HTTP/2 200 OK"
+2025-05-08 11:10:35,783 [INFO] HTTP Request: HEAD http://www.robotstxt.org "HTTP/1.1 200 OK"
+2025-05-08 11:10:36,021 [INFO] HTTP Request: HEAD http://www.whatarecookies.com "HTTP/1.1 301 Moved Permanently"
+2025-05-08 11:10:36,023 [INFO] HTTP Request: HEAD http://www.randomnumbergenerator.com "HTTP/1.1 301 Moved Permanently"
+2025-05-08 11:10:36,566 [INFO] HTTP Request: HEAD https://www.whatarecookies.com/ "HTTP/1.1 200 OK"
+2025-05-08 11:10:36,568 [INFO] HTTP Request: HEAD https://www.randomnumbergenerator.com/ "HTTP/1.1 200 OK"
+2025-05-08 11:10:36,570 [INFO] Checked internal http://en.wikipedia.org/wiki/Link_rot - 200 - OK: The request was successful.
+2025-05-08 11:10:36,570 [INFO] Checked internal http://www.robotstxt.org - 200 - OK: The request was successful.
+2025-05-08 11:10:36,570 [INFO] Checked internal http://www.whatarecookies.com - 200 - OK: The request was successful.
+2025-05-08 11:10:36,570 [INFO] Checked internal http://www.randomnumbergenerator.com - 200 - OK: The request was successful.
+2025-05-08 11:10:36,570 [INFO] Checked https://www.deadlinkchecker.com/terms.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:37,159 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/terms.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:37,167 [INFO] Extracted 16 links from https://www.deadlinkchecker.com/terms.asp
+2025-05-08 11:10:37,475 [INFO] HTTP Request: HEAD https://www.paypal.com/uk/webapps/mpp/ua/privacy-full "HTTP/2 302 Found"
+2025-05-08 11:10:37,810 [INFO] HTTP Request: HEAD https://www.paypal.com/uk/legalhub/privacy-full "HTTP/2 302 Found"
+2025-05-08 11:10:38,613 [INFO] HTTP Request: HEAD https://www.paypal.com/uk/legalhub/paypal/privacy-full "HTTP/2 200 OK"
+2025-05-08 11:10:38,616 [INFO] Checked internal https://www.paypal.com/uk/webapps/mpp/ua/privacy-full - 200 - OK: The request was successful.
+2025-05-08 11:10:38,616 [INFO] Checked https://www.deadlinkchecker.com/faq.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:39,180 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/faq.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:39,321 [INFO] Extracted 21 links from https://www.deadlinkchecker.com/faq.asp
+2025-05-08 11:10:39,331 [WARNING] Attempt 1 failed for mailto:info@deadlinkchecker.com?subject=Dead%20Link%20Checker: RequestError: UnsupportedProtocol
+2025-05-08 11:10:39,436 [INFO] HTTP Request: HEAD http://www.robotstxt.org/ "HTTP/1.1 200 OK"
+2025-05-08 11:10:39,443 [INFO] HTTP Request: HEAD https://support.google.com/analytics/answer/1034823 "HTTP/2 404 Not Found"
+2025-05-08 11:10:39,599 [INFO] HTTP Request: HEAD http://www.whatarecookies.com/enable.asp "HTTP/1.1 301 Moved Permanently"
+2025-05-08 11:10:39,880 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/features.asp "HTTP/2 200 OK"
+2025-05-08 11:10:40,241 [INFO] HTTP Request: HEAD https://www.whatarecookies.com/enable.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:40,309 [INFO] HTTP Request: HEAD http://www.microsoft.com/robots.txt "HTTP/1.1 200 OK"
+2025-05-08 11:10:40,333 [WARNING] Attempt 2 failed for mailto:info@deadlinkchecker.com?subject=Dead%20Link%20Checker: UnhandledError: unknown url type: '/info@deadlinkchecker.com?subject=Dead%20Link%20Checker'
+2025-05-08 11:10:41,334 [WARNING] Attempt 3 failed for mailto:info@deadlinkchecker.com?subject=Dead%20Link%20Checker: UnhandledError: unknown url type: '/info@deadlinkchecker.com?subject=Dead%20Link%20Checker'
+2025-05-08 11:10:41,337 [INFO] Checked internal http://www.robotstxt.org/ - 200 - OK: The request was successful.
+2025-05-08 11:10:41,337 [INFO] Checked internal https://support.google.com/analytics/answer/1034823 - 404 - Not Found: The resource could not be found.
+2025-05-08 11:10:41,337 [INFO] Checked internal https://www.deadlinkchecker.com/features.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:41,337 [INFO] Checked internal http://www.whatarecookies.com/enable.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:41,337 [INFO] Checked internal http://www.microsoft.com/robots.txt - 200 - OK: The request was successful.
+2025-05-08 11:10:41,337 [INFO] Checked internal mailto:info@deadlinkchecker.com?subject=Dead%20Link%20Checker - ERROR - An error occurred while checking the link.
+2025-05-08 11:10:41,337 [INFO] Checked https://www.deadlinkchecker.com/createaccount.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:41,890 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/createaccount.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:41,897 [INFO] Extracted 16 links from https://www.deadlinkchecker.com/createaccount.asp
+2025-05-08 11:10:42,558 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/resetpassword.asp "HTTP/2 200 OK"
+2025-05-08 11:10:42,560 [INFO] Checked internal https://www.deadlinkchecker.com/resetpassword.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:42,561 [INFO] Checked https://www.deadlinkchecker.com/automatic-broken-link-check.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:43,112 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/automatic-broken-link-check.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:43,123 [INFO] Extracted 15 links from https://www.deadlinkchecker.com/automatic-broken-link-check.asp
+2025-05-08 11:10:43,123 [INFO] Checked https://www.deadlinkchecker.com/sitemap.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:43,671 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/sitemap.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:43,687 [INFO] Extracted 17 links from https://www.deadlinkchecker.com/sitemap.asp
+2025-05-08 11:10:43,687 [INFO] Checked https://www.deadlinkchecker.com/accountsettings.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:44,230 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/accountsettings.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:44,237 [INFO] Extracted 17 links from https://www.deadlinkchecker.com/accountsettings.asp
+2025-05-08 11:10:44,248 [WARNING] Attempt 1 failed for javascript:loginfirst();: RequestError: UnsupportedProtocol
+2025-05-08 11:10:45,250 [WARNING] Attempt 2 failed for javascript:loginfirst();: RequestError: UnsupportedProtocol
+2025-05-08 11:10:46,261 [WARNING] Attempt 3 failed for javascript:loginfirst();: RequestError: UnsupportedProtocol
+2025-05-08 11:10:46,265 [INFO] Checked internal javascript:loginfirst(); - ERROR - An error occurred while checking the link.
+2025-05-08 11:10:46,265 [INFO] Checked https://www.deadlinkchecker.com/error-codes.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:46,816 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/error-codes.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:46,826 [INFO] Extracted 15 links from https://www.deadlinkchecker.com/error-codes.asp
+2025-05-08 11:10:46,826 [INFO] Checked https://www.deadlinkchecker.com/website-link-checker-options.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:47,375 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/website-link-checker-options.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:47,383 [INFO] Extracted 17 links from https://www.deadlinkchecker.com/website-link-checker-options.asp
+2025-05-08 11:10:47,956 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/automatic-broken-link-check.asp?plan=premium "HTTP/2 200 OK"
+2025-05-08 11:10:47,958 [INFO] HTTP Request: HEAD https://www.deadlinkchecker.com/automatic-broken-link-check.asp?plan=professional "HTTP/2 200 OK"
+2025-05-08 11:10:47,960 [INFO] Checked internal https://www.deadlinkchecker.com/automatic-broken-link-check.asp?plan=premium - 200 - OK: The request was successful.
+2025-05-08 11:10:47,960 [INFO] Checked internal https://www.deadlinkchecker.com/automatic-broken-link-check.asp?plan=professional - 200 - OK: The request was successful.
+2025-05-08 11:10:47,960 [INFO] Checked https://www.deadlinkchecker.com/login.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:48,514 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/login.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:48,527 [INFO] Extracted 16 links from https://www.deadlinkchecker.com/login.asp
+2025-05-08 11:10:48,527 [INFO] Checked https://www.deadlinkchecker.com/multiple-websites-broken-link-check.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:49,086 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/multiple-websites-broken-link-check.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:49,094 [INFO] Extracted 18 links from https://www.deadlinkchecker.com/multiple-websites-broken-link-check.asp
+2025-05-08 11:10:49,095 [INFO] Checked https://www.deadlinkchecker.com/about.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:49,645 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/about.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:49,653 [INFO] Extracted 21 links from https://www.deadlinkchecker.com/about.asp
+2025-05-08 11:10:49,653 [INFO] Checked https://www.deadlinkchecker.com/website-dead-link-checker.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:50,308 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/website-dead-link-checker.asp "HTTP/1.1 200 OK"
+2025-05-08 11:10:50,317 [INFO] Extracted 16 links from https://www.deadlinkchecker.com/website-dead-link-checker.asp
+2025-05-08 11:10:50,317 [INFO] Checked https://www.deadlinkchecker.com/ - 200 - OK: The request was successful.
+2025-05-08 11:10:50,991 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/ "HTTP/1.1 200 OK"
+2025-05-08 11:10:51,017 [INFO] Extracted 18 links from https://www.deadlinkchecker.com/
+2025-05-08 11:10:51,017 [INFO] Checked https://www.deadlinkchecker.com/reports.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:51,558 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/reports.asp "HTTP/1.1 302 Object moved"
+2025-05-08 11:10:51,560 [INFO] Extracted 1 links from https://www.deadlinkchecker.com/reports.asp
+2025-05-08 11:10:51,560 [INFO] Checked https://blog.deadlinkchecker.com/p/free-resources.html - 200 - OK: The request was successful.
+2025-05-08 11:10:51,954 [INFO] HTTP Request: GET https://blog.deadlinkchecker.com/p/free-resources.html "HTTP/1.1 200 OK"
+2025-05-08 11:10:52,001 [INFO] Extracted 39 links from https://blog.deadlinkchecker.com/p/free-resources.html
+2025-05-08 11:10:52,757 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&pageID=4936623126615491885&target=pinterest "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:52,759 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&pageID=4936623126615491885&target=blog "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:52,760 [INFO] HTTP Request: HEAD https://www.blogger.com/page-edit.g?blogID=950052209208942952&pageID=4936623126615491885&from=pencil "HTTP/2 302 Found"
+2025-05-08 11:10:52,761 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&pageID=4936623126615491885&target=twitter "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:52,761 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&pageID=4936623126615491885&target=facebook "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:52,763 [INFO] HTTP Request: HEAD https://www.blogger.com/share-post.g?blogID=950052209208942952&pageID=4936623126615491885&target=email "HTTP/2 405 Method Not Allowed"
+2025-05-08 11:10:52,859 [INFO] HTTP Request: HEAD https://accounts.google.com/ServiceLogin?service=blogger&passive=1209600&continue=https://www.blogger.com/page-edit.g?blogID%3D950052209208942952%26pageID%3D4936623126615491885%26from%3Dpencil&followup=https://www.blogger.com/page-edit.g?blogID%3D950052209208942952%26pageID%3D4936623126615491885%26from%3Dpencil "HTTP/2 302 Found"
+2025-05-08 11:10:52,909 [INFO] HTTP Request: HEAD https://accounts.google.com/InteractiveLogin?continue=https://www.blogger.com/page-edit.g?blogID%3D950052209208942952%26pageID%3D4936623126615491885%26from%3Dpencil&followup=https://www.blogger.com/page-edit.g?blogID%3D950052209208942952%26pageID%3D4936623126615491885%26from%3Dpencil&passive=1209600&service=blogger&ifkv=ASKV5Mi1PbV63iI8fu7-rVQXMEn5vDKC3n21EzIB4FaAjCqs5Dl70N9F7nVW_y2PLWUjG81XJAS6nQ "HTTP/2 302 Found"
+2025-05-08 11:10:52,996 [INFO] HTTP Request: HEAD https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.blogger.com%2Fpage-edit.g%3FblogID%3D950052209208942952%26pageID%3D4936623126615491885%26from%3Dpencil&followup=https%3A%2F%2Fwww.blogger.com%2Fpage-edit.g%3FblogID%3D950052209208942952%26pageID%3D4936623126615491885%26from%3Dpencil&ifkv=ASKV5Mgci8WAhGzMcgc03XUGDjyWe88cl4uezj5OvY_vw_5fLwwmhCkTFDdi5q1Xs3VWjjKKgRaMBg&passive=1209600&service=blogger&flowName=WebLiteSignIn&flowEntry=ServiceLogin&dsh=S456213077%3A1746691852907918 "HTTP/2 200 OK"
+2025-05-08 11:10:52,997 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&pageID=4936623126615491885&target=pinterest - 405 - Unexpected status code.
+2025-05-08 11:10:52,997 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&pageID=4936623126615491885&target=blog - 405 - Unexpected status code.
+2025-05-08 11:10:52,997 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&pageID=4936623126615491885&target=twitter - 405 - Unexpected status code.
+2025-05-08 11:10:52,997 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&pageID=4936623126615491885&target=facebook - 405 - Unexpected status code.
+2025-05-08 11:10:52,997 [INFO] Checked internal https://www.blogger.com/share-post.g?blogID=950052209208942952&pageID=4936623126615491885&target=email - 405 - Unexpected status code.
+2025-05-08 11:10:52,997 [INFO] Checked internal https://www.blogger.com/page-edit.g?blogID=950052209208942952&pageID=4936623126615491885&from=pencil - 200 - OK: The request was successful.
+2025-05-08 11:10:52,997 [INFO] Checked https://www.deadlinkchecker.com/multisite.asp - 200 - OK: The request was successful.
+2025-05-08 11:10:53,544 [INFO] HTTP Request: GET https://www.deadlinkchecker.com/multisite.asp "HTTP/1.1 302 Object moved"
+2025-05-08 11:10:53,546 [INFO] Extracted 1 links from https://www.deadlinkchecker.com/multisite.asp

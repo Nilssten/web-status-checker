@@ -5,10 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Added new CLI argument: --max-depth">
-      <change afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web_status_checker/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crawler.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/web_status_checker-0.1.0-py3-none-any.whl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/web_status_checker-0.1.0.tar.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/link_report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-results/link_info.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-results/link_report_2025-05-20_10-55-57.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-results/link_report_2025-05-20_17-26-00.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-results/link_report_2025-05-20_17-27-30.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-results/link_report_2025-05-23_16-48-39.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_status_checker/web_status_checker.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_status_checker/web_status_checker.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_status_checker/web_status_checker.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_status_checker/web_status_checker.egg-info/requires.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web_status_checker/web_status_checker.egg-info/top_level.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_status_checker/WebCrawler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,11 +365,18 @@
       <option name="project" value="LOCAL" />
       <updated>1747751532866</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added new CLI argument: --max-depth">
+      <option name="closed" value="true" />
+      <created>1748008211497</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1748008211497</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented exit codes for CI/CD or scripting" />
     <MESSAGE value="Updated README file" />
     <MESSAGE value="Improve performance with multithreaded link checking and tqdm progress bar" />
     <MESSAGE value="Bug fixes, added a manual tqdm wrapper" />
@@ -383,6 +401,7 @@
     <MESSAGE value="updated README" />
     <MESSAGE value="Added commented example for passing CLI flags in Playwright test" />
     <MESSAGE value="Added new CLI argument: --max-depth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new CLI argument: --max-depth" />
+    <MESSAGE value="Add package structure and build configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add package structure and build configuration" />
   </component>
 </project>

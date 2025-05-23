@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Link Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .success { color: green; }
+        .fail { color: red; }
+        .error { color: orange; }
+        .trusted { color: green; }
+        .internal { color: gray; }
+        .sortable th {
+            cursor: pointer;
+        }
+        .sortable th:hover {
+            text-decoration: underline;
+        }
+        .filter-btn {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body class="container py-4">
+    <h1 class="mb-4">🔗 Link Status Report</h1>
+
+    <div class="mb-3">
+        <p><strong>Total Links Checked:</strong> </p>
+        <p class="text-success">✅ Successful: </p>
+        <p class="text-danger">❌ Broken: </p>
+        <p class="text-warning">⚠️ Errors: </p>
+    </div>
+
+    <div class="mb-3">
+        <button class="btn btn-outline-secondary filter-btn" data-filter="all">Show All</button>
+        <button class="btn btn-outline-success filter-btn" data-filter="success">✅ 200 OK</button>
+        <button class="btn btn-outline-warning filter-btn" data-filter="error">⚠️ Error</button>
+        <button class="btn btn-outline-danger filter-btn" data-filter="fail">❌ Broken</button>
+        <button class="btn btn-outline-primary filter-btn" onclick="downloadCSV()">⬇️ Download as CSV</button>
+    </div>
+
+    <table class="table table-bordered sortable" id="linkTable">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>URL</th>
+                <th>Note</th>
+                <th>Source</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <script>
+        // Filter buttons
+        const buttons = document.querySelectorAll('.filter-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                const rows = document.querySelectorAll('.link-row');
+                rows.forEach(row => {
+                    if (filter === 'all') {
+                        row.style.display = '';
+                    } else {
+                        // Filtering by success/error/fail status
+                        const rowClasses = row.classList;
+                        if (
+                            (filter === 'success' && rowClasses.contains('success')) ||
+                            (filter === 'error' && rowClasses.contains('error')) ||
+                            (filter === 'fail' && rowClasses.contains('fail'))
+                        ) {
+                            row.style.display = '';
+                        } else {
+                            row.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+
+        // Sorting logic
+        document.querySelectorAll('.sortable th').forEach((header, columnIndex) => {
+            header.addEventListener('click', () => {
+                const table = header.closest('table');
+                const tbody = table.querySelector('tbody');
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+
+                const asc = header.classList.toggle('asc');
+                rows.sort((a, b) => {
+                    const cellA = a.children[columnIndex].innerText.toLowerCase();
+                    const cellB = b.children[columnIndex].innerText.toLowerCase();
+                    return asc ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+                });
+
+                tbody.innerHTML = '';
+                rows.forEach(row => tbody.appendChild(row));
+            });
+        });
+        function downloadCSV() {
+        const rows = Array.from(document.querySelectorAll('#linkTable tbody tr'));
+        const csvRows = [['Status', 'URL', 'Note', 'Source']];
+
+        rows.forEach(row => {
+            const cols = row.querySelectorAll('td');
+            const status = cols[0].innerText.trim();
+            const url = cols[1].innerText.trim();
+            const note = cols[2].innerText.trim();
+            const source = cols[3].innerText.trim();
+            csvRows.push([status, url, note, source]);
+        });
+
+        const csvContent = csvRows.map(e => e.map(val => `"${val.replace(/"/g, '""')}"`).join(',')).join('\n');
+        const blob = new Blob([csvContent], { type: 'text/csv' });
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'link_report.csv';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+    </script>
+</body>
+</html>

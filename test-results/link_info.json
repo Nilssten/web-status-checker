@@ -1,0 +1,9 @@
+[
+  {
+    "url": "https://www.iana.org/domains/example",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.example.com",
+    "note": "OK: The request was successful."
+  }
+]
