@@ -361,7 +361,9 @@ async def main():
         checker.save_json_report(result)  # <-- Save JSON file
 
         if fail_on_broken:
-            broken_count = sum(1 for _, code, _, _ in result if code != 200 and code != "ERROR")
+            broken_count = sum(
+                1 for link in result if link.status_code != 200 and link.status_code != "ERROR"
+            )
             if broken_count > 0:
                 print(f"\n❌ {broken_count} broken/error links found. Exiting with error code 1.")
                 sys.exit(1)
