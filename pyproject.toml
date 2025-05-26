@@ -23,5 +23,5 @@ dependencies = [
     "mypy"
 ]
 
-[tool.setuptools.packages.find]
-where = ["web_status_checker"]
+[tool.setuptools]
+packages = ["web_status_checker"]
