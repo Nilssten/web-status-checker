@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="bug fix">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-results/link_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/test-results/link_info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-results/link_report_2025-05-20_10-55-57.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-results/link_report_2025-05-20_17-26-00.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web_status_checker/WebCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_status_checker/WebCrawler.py" afterDir="false" />
-    </list>
+    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Add create_secure_tls_context" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -401,11 +395,18 @@
       <option name="project" value="LOCAL" />
       <updated>1748260519416</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Add create_secure_tls_context">
+      <option name="closed" value="true" />
+      <created>1761811831976</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1761811831976</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Bug fixes, added a manual tqdm wrapper" />
     <MESSAGE value="updated requirements.txt" />
     <MESSAGE value="Replaced requests with httpx (synchronous version)" />
     <MESSAGE value="Added jinja2 for better results layout" />
@@ -430,6 +431,7 @@
     <MESSAGE value="Add package structure and build configuration" />
     <MESSAGE value="pyproject fix" />
     <MESSAGE value="bug fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
+    <MESSAGE value="Add create_secure_tls_context" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add create_secure_tls_context" />
   </component>
 </project>
