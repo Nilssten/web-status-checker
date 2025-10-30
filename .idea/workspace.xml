@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="Add package structure and build configuration">
+    <list default="true" id="4edc89d9-d1e5-4ce5-9f1c-336a101ecc6e" name="Changes" comment="bug fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/link_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/test-results/link_info.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/link_report_2025-05-20_10-55-57.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-results/link_report_2025-05-20_17-26-00.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web_status_checker/WebCrawler.py" beforeDir="false" afterPath="$PROJECT_DIR$/web_status_checker/WebCrawler.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,12 +385,26 @@
       <option name="project" value="LOCAL" />
       <updated>1748008937444</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="pyproject fix">
+      <option name="closed" value="true" />
+      <created>1748246037740</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1748246037740</updated>
+    </task>
+    <task id="LOCAL-00036" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1748260519415</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1748260519416</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Updated README file" />
-    <MESSAGE value="Improve performance with multithreaded link checking and tqdm progress bar" />
     <MESSAGE value="Bug fixes, added a manual tqdm wrapper" />
     <MESSAGE value="updated requirements.txt" />
     <MESSAGE value="Replaced requests with httpx (synchronous version)" />
@@ -410,6 +428,8 @@
     <MESSAGE value="Added commented example for passing CLI flags in Playwright test" />
     <MESSAGE value="Added new CLI argument: --max-depth" />
     <MESSAGE value="Add package structure and build configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add package structure and build configuration" />
+    <MESSAGE value="pyproject fix" />
+    <MESSAGE value="bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fix" />
   </component>
 </project>

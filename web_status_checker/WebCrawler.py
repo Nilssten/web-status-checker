@@ -19,6 +19,13 @@ import aiohttp
 import json
 from dataclasses import dataclass
 from dataclasses_json import dataclass_json
+import ssl
+
+def create_secure_tls_context() -> ssl.SSLContext:
+    context = ssl.create_default_context()
+    context.check_hostname = False
+    context.verify_mode = ssl.CERT_NONE
+    return context
 
 @dataclass_json
 @dataclass
@@ -31,6 +38,13 @@ class LinkInfo:
 
 log_path = Path("test-results/errors.log")
 
+SSL_CONTEXT = create_secure_tls_context()
+
+DEFAULT_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/113.0.0.0 Safari/537.36"
+}
 
 class LinkChecker:
     def extract_links(self, url, attempts=3):

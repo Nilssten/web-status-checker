@@ -1,527 +1,555 @@
 [
   {
-    "url": "https://development.testdevlab.com",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/qa-management",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/test-automation",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/non-functional-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
     "url": "https://www.testdevlab.com/services/performance-testing",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://www.testdevlab.com/services/functional-testing",
+    "url": "https://development.testdevlab.com",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/ci-cd-services",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/competitive-analysis-and-benchmarking",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/compatibility-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/manual-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/cdn-cgi/l/email-protection#fe97909891be8a9b8d8a9a9b88929f9cd09d9193c18d8b9c949b9d8ac3b69b929291",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/regression-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/qa-audit",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/iso-advisory-services",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
     "url": "https://loadero.com/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://testray.io/",
+    "url": "https://www.testdevlab.com/services/iso-advisory-services",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://github.com/testdevlab/TestRay",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://isoadvisory.testdevlab.com",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/cx-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
     "url": "https://www.testdevlab.com/services/qa-consultancy",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/platforms/web-application-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/ux-and-usability-evaluation",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://twitter.com/testdevlab",
-    "status_code": 403,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "Forbidden: Access denied."
-  },
-  {
-    "url": "https://www.testdevlab.com/company/why-testdevlab",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/scaleups",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
     "url": "https://www.testdevlab.com/services/security-testing",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/enterprise",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/artificial-intelligence",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/innovations/battery-and-data-usage-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/company/workflow",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/platforms/ar-vr-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://careers.testdevlab.com/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/platforms/sdk-testing-services",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/testing-levels/integration-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/company/about-us",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/platforms/desktop-application-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/gaming",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
     "url": "https://www.testdevlab.com/services/accessibility-testing",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://www.testdevlab.com/cookie-policy",
+    "url": "https://www.testdevlab.com/services",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://www.testdevlab.com/industries/communications",
+    "url": "https://www.testdevlab.com/services/non-functional-testing",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://www.testdevlab.com/industries/healthcare",
+    "url": "https://www.testdevlab.com/services/functional-testing",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/services/qa-audit",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/services/competitive-intelligence",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://isoadvisory.testdevlab.com",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/services/compatibility-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/services/qa-management",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://testray.io/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/cdn-cgi/l/email-protection#254c4b434a65514056514140534944470b464a481a5650474f404651186d4049494a",
+    "status_code": 404,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "Not Found: The resource could not be found."
+  },
+  {
+    "url": "https://qualityforge.io/?utm_source=testdevlabcom&utm_medium=banner&utm_campaign=qualityforge2025&utm_content=homepage",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/services/test-automation",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://github.com/testdevlab/TestRay",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://twitter.com/testdevlab",
+    "status_code": 403,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "Forbidden: Access denied."
+  },
+  {
+    "url": "https://www.testdevlab.com/services/regression-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://careers.testdevlab.com/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/services/cx-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/services/ux-and-usability-evaluation",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
     "url": "https://www.youtube.com/TestDevLab",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://www.testdevlab.com/industries/travel-hospitality",
+    "url": "https://www.testdevlab.com/services/ci-cd-services",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://www.testdevlab.com/innovations/audio-video-quality-testing",
+    "url": "https://www.testdevlab.com/services/manual-testing",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/security-authentication",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/platforms/mobile-application-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/hardware-iot",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/contact-us",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/privacy-policy",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/content-library/case-studies",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/startups",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/testing-levels/system-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/fintech-banking",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/innovations/location-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/platforms/api-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.facebook.com/TestDevLab",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/testing-levels/user-acceptance-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/content-library/podcasts",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/company/clients",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/content-library/whitepapers",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/innovations/network-simulation-services",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
     "url": "https://www.testdevlab.com/content-library/press-center",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/innovations/audio-video-quality-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/content-library/whitepapers",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/industries/communications",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.facebook.com/TestDevLab",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/innovations/battery-and-data-usage-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/industries/fintech-banking",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/content-library/podcasts",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/scaleups",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/company/why-testdevlab",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/industries/hardware-iot",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/innovations/location-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/testing-levels/integration-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/industries/security-authentication",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/testing-levels/user-acceptance-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/center-of-excellence/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/platforms/desktop-application-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/platforms/mobile-application-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/startups",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/contact-us",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/platforms/api-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
     "url": "https://www.testdevlab.com/blog",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://www.testdevlab.com/content-library/case-studies/soundtrack-your-brand",
+    "url": "https://www.testdevlab.com/cookie-policy",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://www.testdevlab.com/blog/ada-compliance-for-websites-checklist",
+    "url": "https://www.testdevlab.com/company/clients",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://www.instagram.com/testdevlablv/",
+    "url": "https://www.testdevlab.com/privacy-policy",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/industries/artificial-intelligence",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/platforms/web-application-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/industries/healthcare",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/center-of-excellence",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/enterprise",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
     "url": "https://www.testdevlab.com/content-library/webinars",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://www.testdevlab.com/blog/test-strategy-optimization-best-practices",
+    "url": "https://www.testdevlab.com/company/workflow",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
-    "url": "https://www.testdevlab.com/blog/reduce-time-and-effort-with-automated-testing",
+    "url": "https://www.testdevlab.com/platforms/ar-vr-testing",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.instagram.com/testdevlablv/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
     "url": "https://lv.linkedin.com/company/testdevlab",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/testing-levels/system-testing",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/content-library/case-studies",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/industries/gaming",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/innovations/network-simulation-services",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/platforms/sdk-testing-services",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/industries/travel-hospitality",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/company/about-us",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/blog/the-importance-of-using-real-mobile-devices-for-qa",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/blog/the-most-popular-video-sdks-in-2025",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/content-library/case-studies/soundtrack-your-brand",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/blog/testing-e-commerce-platforms-for-black-friday",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   },
   {
     "url": "tel:+371 25423562",
     "status_code": "ERROR",
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
     "note": "An error occurred while checking the link."
   },
   {
-    "url": "https://www.testdevlab.com/cdn-cgi/l/email-protection#2c45424a436c58495f5848495a404d4e024f4341135f594e46494f58116449404043",
-    "status_code": 200,
+    "url": "https://www.testdevlab.com/cdn-cgi/l/email-protection#c8a1a6aea788bcadbbbcacadbea4a9aae6aba7a5f7bbbdaaa2adabbcf580ada4a4a7",
+    "status_code": 404,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com",
-    "note": "OK: The request was successful."
+    "source_url": "https://www.testdevlab.com/",
+    "note": "Not Found: The resource could not be found."
   },
   {
     "url": "https://www.testdevlab.com/sitemap-0.xml",
     "status_code": 200,
     "source_type": "sitemap",
-    "source_url": "https://www.testdevlab.com",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/sitemap-blog.xml",
+    "status_code": 200,
+    "source_type": "sitemap",
+    "source_url": "https://www.testdevlab.com/",
+    "note": "OK: The request was successful."
+  },
+  {
+    "url": "https://www.testdevlab.com/center-of-excellence/sitemap.xml",
+    "status_code": 200,
+    "source_type": "sitemap",
+    "source_url": "https://www.testdevlab.com/",
     "note": "OK: The request was successful."
   }
 ]
