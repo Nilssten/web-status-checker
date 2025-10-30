@@ -1,555 +1,475 @@
 [
   {
-    "url": "https://www.testdevlab.com/services/performance-testing",
+    "url": "https://www.google.com/chrome/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://www.google.com/chrome/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://www.google.com/chrome/"
+    ]
   },
   {
-    "url": "https://development.testdevlab.com",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://loadero.com/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/iso-advisory-services",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/qa-consultancy",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/security-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/accessibility-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/non-functional-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/functional-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/qa-audit",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/competitive-intelligence",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://isoadvisory.testdevlab.com",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/compatibility-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/qa-management",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://testray.io/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/cdn-cgi/l/email-protection#254c4b434a65514056514140534944470b464a481a5650474f404651186d4049494a",
-    "status_code": 404,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "Not Found: The resource could not be found."
-  },
-  {
-    "url": "https://qualityforge.io/?utm_source=testdevlabcom&utm_medium=banner&utm_campaign=qualityforge2025&utm_content=homepage",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/test-automation",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://github.com/testdevlab/TestRay",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://twitter.com/testdevlab",
-    "status_code": 403,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "Forbidden: Access denied."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/regression-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://careers.testdevlab.com/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/cx-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/ux-and-usability-evaluation",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.youtube.com/TestDevLab",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/ci-cd-services",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/services/manual-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/content-library/press-center",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/innovations/audio-video-quality-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/content-library/whitepapers",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/communications",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.facebook.com/TestDevLab",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/innovations/battery-and-data-usage-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/fintech-banking",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/content-library/podcasts",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/scaleups",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/company/why-testdevlab",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/hardware-iot",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/innovations/location-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/testing-levels/integration-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/security-authentication",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/testing-levels/user-acceptance-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/center-of-excellence/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/platforms/desktop-application-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/platforms/mobile-application-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/startups",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/contact-us",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/platforms/api-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/blog",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/cookie-policy",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/company/clients",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/privacy-policy",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/artificial-intelligence",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/platforms/web-application-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/healthcare",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/center-of-excellence",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/enterprise",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/content-library/webinars",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/company/workflow",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/platforms/ar-vr-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.instagram.com/testdevlablv/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://lv.linkedin.com/company/testdevlab",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/testing-levels/system-testing",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/content-library/case-studies",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
-  },
-  {
-    "url": "https://www.testdevlab.com/industries/gaming",
-    "status_code": 200,
+    "url": "https://www.facebook.com/estudiodrowers",
+    "status_code": 400,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_url": "https://drowers.com/",
+    "note": "Bad Request: Invalid syntax.",
+    "final_url": "https://www.facebook.com/estudiodrowers",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://www.facebook.com/estudiodrowers"
+    ]
   },
   {
-    "url": "https://www.testdevlab.com/innovations/network-simulation-services",
+    "url": "https://www.youtube.com/channel/UCww7NJ4ltUK-0pINqOhw-1g",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful. (Redirected 1x → https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCww7NJ4ltUK-0pINqOhw-1g%3Fcbrd%3D1&gl=LV&m=0&pc=yt&cm=2&hl=lv&src=1)",
+    "final_url": "https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCww7NJ4ltUK-0pINqOhw-1g%3Fcbrd%3D1&gl=LV&m=0&pc=yt&cm=2&hl=lv&src=1",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://www.youtube.com/channel/UCww7NJ4ltUK-0pINqOhw-1g",
+      "https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCww7NJ4ltUK-0pINqOhw-1g%3Fcbrd%3D1&gl=LV&m=0&pc=yt&cm=2&hl=lv&src=1"
+    ]
   },
   {
-    "url": "https://www.testdevlab.com/platforms/sdk-testing-services",
+    "url": "https://www.linkedin.com/company/drowers/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://www.linkedin.com/company/drowers/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://www.linkedin.com/company/drowers/"
+    ]
   },
   {
-    "url": "https://www.testdevlab.com/industries/travel-hospitality",
+    "url": "https://www.tiktok.com/@drowersestudio",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://www.tiktok.com/@drowersestudio",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://www.tiktok.com/@drowersestudio"
+    ]
   },
   {
-    "url": "https://www.testdevlab.com/company/about-us",
+    "url": "https://www.instagram.com/drowersestudio",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful. (Redirected 1x → https://www.instagram.com/drowersestudio/)",
+    "final_url": "https://www.instagram.com/drowersestudio/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://www.instagram.com/drowersestudio",
+      "https://www.instagram.com/drowersestudio/"
+    ]
   },
   {
-    "url": "https://www.testdevlab.com/blog/the-importance-of-using-real-mobile-devices-for-qa",
+    "url": "https://www.instagram.com/drowersestudio/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://www.instagram.com/drowersestudio/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://www.instagram.com/drowersestudio/"
+    ]
   },
   {
-    "url": "https://www.testdevlab.com/blog/the-most-popular-video-sdks-in-2025",
+    "url": "https://es.linkedin.com/company/drowers",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://es.linkedin.com/company/drowers",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://es.linkedin.com/company/drowers"
+    ]
   },
   {
-    "url": "https://www.testdevlab.com/content-library/case-studies/soundtrack-your-brand",
+    "url": "https://emprendapp.com",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://emprendapp.com",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://emprendapp.com"
+    ]
   },
   {
-    "url": "https://www.testdevlab.com/blog/testing-e-commerce-platforms-for-black-friday",
+    "url": "https://entrenair.com",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://entrenair.com",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://entrenair.com"
+    ]
   },
   {
-    "url": "tel:+371 25423562",
+    "url": "mailto:estudio@drowers.com",
     "status_code": "ERROR",
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "An error occurred while checking the link."
+    "source_url": "https://drowers.com/",
+    "note": "UnhandledError: unknown url type: '/estudio@drowers.com'",
+    "final_url": "mailto:estudio@drowers.com",
+    "redirect_count": 0,
+    "redirect_chain": []
   },
   {
-    "url": "https://www.testdevlab.com/cdn-cgi/l/email-protection#c8a1a6aea788bcadbbbcacadbea4a9aae6aba7a5f7bbbdaaa2adabbcf580ada4a4a7",
-    "status_code": 404,
+    "url": "https://inmocms.com/",
+    "status_code": 200,
     "source_type": "link",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "Not Found: The resource could not be found."
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://inmocms.com/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://inmocms.com/"
+    ]
   },
   {
-    "url": "https://www.testdevlab.com/sitemap-0.xml",
+    "url": "https://drowers.com/#1649330901836-81b541ae-dbfb",
     "status_code": 200,
-    "source_type": "sitemap",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/#1649330901836-81b541ae-dbfb",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/#1649330901836-81b541ae-dbfb"
+    ]
   },
   {
-    "url": "https://www.testdevlab.com/sitemap-blog.xml",
+    "url": "https://drowers.com/#1649330902801-876ce114-1309",
     "status_code": 200,
-    "source_type": "sitemap",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/#1649330902801-876ce114-1309",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/#1649330902801-876ce114-1309"
+    ]
   },
   {
-    "url": "https://www.testdevlab.com/center-of-excellence/sitemap.xml",
+    "url": "https://drowers.com/#1649330902280-557aed64-6f32",
     "status_code": 200,
-    "source_type": "sitemap",
-    "source_url": "https://www.testdevlab.com/",
-    "note": "OK: The request was successful."
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/#1649330902280-557aed64-6f32",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/#1649330902280-557aed64-6f32"
+    ]
+  },
+  {
+    "url": "https://drowers.com/carrito/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/carrito/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/carrito/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/contacto/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/contacto/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/contacto/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/contacto",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful. (Redirected 1x → https://drowers.com/contacto/)",
+    "final_url": "https://drowers.com/contacto/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://drowers.com/contacto",
+      "https://drowers.com/contacto/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/kit-digital-agente-digitalizador/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/kit-digital-agente-digitalizador/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/kit-digital-agente-digitalizador/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/finalizar-compra/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful. (Redirected 1x → https://drowers.com/carrito/)",
+    "final_url": "https://drowers.com/carrito/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://drowers.com/finalizar-compra/",
+      "https://drowers.com/carrito/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/lolin/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/lolin/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/lolin/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/destacados/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/destacados/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/destacados/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/portfolio/plataforma-bonos-comercio-badalona/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/portfolio/plataforma-bonos-comercio-badalona/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/portfolio/plataforma-bonos-comercio-badalona/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/imagen-corporativa-y-diseno-web-para-entrenair/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/imagen-corporativa-y-diseno-web-para-entrenair/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/imagen-corporativa-y-diseno-web-para-entrenair/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/el-estudio/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/el-estudio/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/el-estudio/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/diseno-web-y-app-personalizada-y-gestion-rrss-de-okitonic/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/diseno-web-y-app-personalizada-y-gestion-rrss-de-okitonic/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/diseno-web-y-app-personalizada-y-gestion-rrss-de-okitonic/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/productos-drowers/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/productos-drowers/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/productos-drowers/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/tienda-online-y-posicionamiento-seo-para-modas-iturriaga/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/tienda-online-y-posicionamiento-seo-para-modas-iturriaga/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/tienda-online-y-posicionamiento-seo-para-modas-iturriaga/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/imagen-corporativa-y-diseno-web-para-dra-marta-pastor/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/imagen-corporativa-y-diseno-web-para-dra-marta-pastor/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/imagen-corporativa-y-diseno-web-para-dra-marta-pastor/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/tienda-online-a-medida-para-happy-kiwwi/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/tienda-online-a-medida-para-happy-kiwwi/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/tienda-online-a-medida-para-happy-kiwwi/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/diseno-de-imagen-corporativa-y-diseno-web-para-alejandro-f-yarritu-arquitecto/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/diseno-de-imagen-corporativa-y-diseno-web-para-alejandro-f-yarritu-arquitecto/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/diseno-de-imagen-corporativa-y-diseno-web-para-alejandro-f-yarritu-arquitecto/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/campana-de-bonos-comercio-para-ayuntamiento-de-barakaldo/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/campana-de-bonos-comercio-para-ayuntamiento-de-barakaldo/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/campana-de-bonos-comercio-para-ayuntamiento-de-barakaldo/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/diseno-web-y-tiendas-online-en-bilbao/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/diseno-web-y-tiendas-online-en-bilbao/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/diseno-web-y-tiendas-online-en-bilbao/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/proyectos/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/proyectos/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/proyectos/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/portfolio/fabricbike/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/portfolio/fabricbike/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/portfolio/fabricbike/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/terminos-y-condiciones",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful. (Redirected 1x → https://drowers.com/terminos-y-condiciones/)",
+    "final_url": "https://drowers.com/terminos-y-condiciones/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://drowers.com/terminos-y-condiciones",
+      "https://drowers.com/terminos-y-condiciones/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/politica-de-privacidad",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful. (Redirected 1x → https://drowers.com/politica-de-privacidad/)",
+    "final_url": "https://drowers.com/politica-de-privacidad/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://drowers.com/politica-de-privacidad",
+      "https://drowers.com/politica-de-privacidad/"
+    ]
+  },
+  {
+    "url": "https://drowers.com/#1649330903388-a9f617f5-a7e4",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://drowers.com/#1649330903388-a9f617f5-a7e4",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://drowers.com/#1649330903388-a9f617f5-a7e4"
+    ]
+  },
+  {
+    "url": "https://drowers.com/plataforma-bonos-comercio",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://drowers.com/",
+    "note": "OK: The request was successful. (Redirected 1x → https://drowers.com/plataforma-bonos-comercio/)",
+    "final_url": "https://drowers.com/plataforma-bonos-comercio/",
+    "redirect_count": 1,
+    "redirect_chain": [
+      "https://drowers.com/plataforma-bonos-comercio",
+      "https://drowers.com/plataforma-bonos-comercio/"
+    ]
   }
 ]

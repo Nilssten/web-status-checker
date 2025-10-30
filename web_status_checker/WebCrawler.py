@@ -23,8 +23,6 @@ import ssl
 
 def create_secure_tls_context() -> ssl.SSLContext:
     context = ssl.create_default_context()
-    context.check_hostname = False
-    context.verify_mode = ssl.CERT_NONE
     return context
 
 @dataclass_json
@@ -35,6 +33,9 @@ class LinkInfo:
     source_type: str
     source_url: str
     note: str
+    final_url: str = ""
+    redirect_count: int = 0
+    redirect_chain: list[str] = None
 
 log_path = Path("test-results/errors.log")
 
@@ -49,9 +50,13 @@ DEFAULT_HEADERS = {
 class LinkChecker:
     def extract_links(self, url, attempts=3):
         headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-            'Referer': url,
-            'Accept': 'text/html,application/xhtml+xml',
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                          "AppleWebKit/537.36 (KHTML, like Gecko) "
+                          "Chrome/115.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+            "Accept-Language": "en-US,en;q=0.9",
+            "Accept-Encoding": "gzip, deflate, br",
+            "Referer": url
         }
 
         for attempt in range(attempts):
@@ -82,45 +87,61 @@ class LinkChecker:
                 if attempt == attempts - 1:
                     return set(), str(e)
 
-    async def check_link_async(self, client, link, retries=2):
-        binary_extensions = [".pdf", ".zip", ".docx", ".xlsx", ".pptx", ".png", ".jpg", ".jpeg", ".gif"]
-        is_binary_file = any(link.lower().endswith(ext) for ext in binary_extensions)
-
+    async def fetch_with_redirects(self, client, url: str, retries=2):
+        """
+        checks a URL, following redirects and returning final status and chain.
+        """
         for attempt in range(retries + 1):
             try:
-                if is_binary_file:
-                    response = await client.get(link, follow_redirects=True, timeout=10)
-                else:
-                    # Try HEAD first
-                    try:
-                        response = await client.head(link, follow_redirects=True, timeout=10)
-                        # If HEAD returns 405 Method Not Allowed, do GET instead
-                        if response.status_code == 405:
-                            response = await client.get(link, follow_redirects=True, timeout=10)
-                    except httpx.HTTPStatusError:
-                        # On HEAD error fallback to GET
-                        response = await client.get(link, follow_redirects=True, timeout=10)
+                response = await client.get(url, headers=DEFAULT_HEADERS, follow_redirects=True, timeout=15)
+                chain = [str(r.url) for r in response.history] + [str(response.url)]
+                redirect_count = len(chain) - 1
+                final_status = response.status_code
+                final_url = str(response.url)
 
-                return (link, response.status_code, "")
-            except httpx.ConnectTimeout:
-                error_msg = "ConnectTimeout"
+                # Treat final < 400 as passed
+                note = self.get_status_notes(final_status)
+                if redirect_count > 0:
+                    note += f" (Redirected {redirect_count}x → {final_url})"
+
+                return url, final_status, note, final_url, redirect_count, chain
+
             except httpx.RequestError as e:
                 error_msg = f"RequestError: {e.__class__.__name__}"
             except Exception as e:
                 error_msg = f"UnhandledError: {str(e)}"
 
-            logging.warning(f"Attempt {attempt + 1} failed for {link}: {error_msg}")
+            logging.warning(f"Attempt {attempt + 1} failed for {url}: {error_msg}")
             if attempt == retries:
-                return (link, "ERROR", error_msg)
+                return url, "ERROR", error_msg, url, 0, []
             await asyncio.sleep(1)
+
+    async def check_link_async(self, client, link, retries=2):
+        """
+        Checks a link asynchronously, skipping binary files and delegating to fetch_with_redirects.
+        """
+        binary_extensions = [".pdf", ".zip", ".docx", ".xlsx", ".pptx", ".png", ".jpg", ".jpeg", ".gif"]
+        is_binary_file = any(link.lower().endswith(ext) for ext in binary_extensions)
+
+        if is_binary_file:
+            # skip content fetch, just confirm reachable
+            try:
+                response = await client.head(link, headers=DEFAULT_HEADERS, timeout=10)
+                note = self.get_status_notes(response.status_code) + " (binary file)"
+                return link, response.status_code, note, link, 0, []
+            except Exception as e:
+                return link, "ERROR", f"BinaryCheckError: {e}", link, 0, []
+
+        # Otherwise handle normally (with redirect following)
+        return await self.fetch_with_redirects(client, link, retries)
 
     async def check_all_links_async(self, links):
         results = []
         async with httpx.AsyncClient(http2=True, timeout=10) as client:
             tasks = [self.check_link_async(client, link) for link in links]
             for coro in tqdm_asyncio.as_completed(tasks, total=len(tasks), desc="Checking links"):
-                result = await coro
-                results.append(result)
+                url, status, note, final_url, redirect_count, chain = await coro
+                results.append((url, status, note, final_url, redirect_count, chain))
         return results
 
     def get_status_notes(self, status_code: int) -> str:
@@ -153,24 +174,26 @@ class LinkChecker:
 
         if internal_links:
             internal_results = await self.check_all_links_async(internal_links)
-            for link, status, error in internal_results:
-                note = self.get_status_notes(status)
+            for link, status_code, note, final_url, redirect_count, chain in internal_results:
                 checked_links.append(LinkInfo(
                     url=link,
-                    status_code=status,
+                    status_code=status_code,
                     note=note,
                     source_type='link',
-                    source_url=url
+                    source_url=url,
+                    final_url=final_url,
+                    redirect_count=redirect_count,
+                    redirect_chain=chain
                 ))
-                logging.info(f"Checked internal {link} - {status} - {note}")
+                logging.info(f"Checked internal {link} - {status_code} - {note}")
 
-                if status == 200:
+                # Recurse only if the final URL responded successfully
+                if str(status_code).isdigit() and int(status_code) < 400:
                     await self.crawl_recursive(link, current_depth + 1, max_depth, seen_links, checked_links)
 
     async def crawl_and_check_links(self, start_url, follow_internal_links=False, max_depth=1):
         checked_links = []
-        seen_links = set()
-        seen_links.add(start_url)
+        seen_links = set([start_url])
 
         def filter_new_links(links):
             return [
@@ -193,22 +216,25 @@ class LinkChecker:
 
         results = await self.check_all_links_async(links_to_check)
 
-        for link, status_code, error in results:
-            note = self.get_status_notes(status_code)
+        for link, status_code, note, final_url, redirect_count, chain in results:
             checked_links.append(LinkInfo(
                 url=link,
                 status_code=status_code,
                 note=note,
                 source_type='link',
-                source_url=start_url
+                source_url=start_url,
+                final_url=final_url,
+                redirect_count=redirect_count,
+                redirect_chain=chain
             ))
             logging.info(f"Checked {link} - {status_code} - {note}")
 
+        # Recursive crawling if enabled
         if follow_internal_links:
-            await self.crawl_recursive(start_url, current_depth=1, max_depth=max_depth, seen_links=seen_links,
-                                       checked_links=checked_links)
+            await self.crawl_recursive(start_url, current_depth=1, max_depth=max_depth,
+                                       seen_links=seen_links, checked_links=checked_links)
 
-        # Step 2: Attempt to fetch and parse sitemap.xml
+        # Step 2: Try sitemap.xml
         sitemap_url = urljoin(start_url, '/sitemap.xml')
         try:
             async with aiohttp.ClientSession() as session:
@@ -221,14 +247,16 @@ class LinkChecker:
                         seen_links.update(new_links)
 
                         sitemap_results = await self.check_all_links_async(new_links)
-                        for sm_link, sm_status, sm_error in sitemap_results:
-                            sm_note = self.get_status_notes(sm_status)
+                        for sm_link, sm_status, sm_note, sm_final, sm_redirects, sm_chain in sitemap_results:
                             checked_links.append(LinkInfo(
                                 url=sm_link,
                                 status_code=sm_status,
                                 note=sm_note,
                                 source_type='sitemap',
-                                source_url=start_url
+                                source_url=start_url,
+                                final_url=sm_final,
+                                redirect_count=sm_redirects,
+                                redirect_chain=sm_chain
                             ))
                             logging.info(f"Checked sitemap {sm_link} - {sm_status} - {sm_note}")
                     else:
@@ -243,20 +271,22 @@ class LinkChecker:
                     if response.status == 200:
                         text = await response.text()
                         soup = BeautifulSoup(text, 'html.parser')
-                        form_actions = [urljoin(start_url, form.get('action')) for form in soup.find_all('form') if
-                                        form.get('action')]
+                        form_actions = [urljoin(start_url, form.get('action'))
+                                        for form in soup.find_all('form') if form.get('action')]
                         form_links = filter_new_links(form_actions)
                         seen_links.update(form_links)
 
                         form_results = await self.check_all_links_async(form_links)
-                        for form_link, form_status, form_error in form_results:
-                            form_note = self.get_status_notes(form_status)
+                        for form_link, form_status, form_note, form_final, form_redirects, form_chain in form_results:
                             checked_links.append(LinkInfo(
                                 url=form_link,
                                 status_code=form_status,
                                 note=form_note,
                                 source_type='form',
-                                source_url=start_url
+                                source_url=start_url,
+                                final_url=form_final,
+                                redirect_count=form_redirects,
+                                redirect_chain=form_chain
                             ))
                             logging.info(f"Checked form {form_link} - {form_status} - {form_note}")
         except Exception as e:
@@ -269,9 +299,11 @@ class LinkChecker:
         report_file = filename or f"test-results/link_report_{now}.html"
 
         # Count stats
-        successful = sum(1 for link in checked_links if link.status_code == 200)
+        successful = sum(1 for link in checked_links if link.status_code == 200 and link.redirect_count == 0)
         errors = sum(1 for link in checked_links if link.status_code == "ERROR")
-        broken = sum(1 for link in checked_links if link.status_code != 200 and link.status_code != "ERROR")
+        broken = sum(1 for link in checked_links if
+                     link.status_code != 200 and link.status_code != "ERROR" and link.redirect_count == 0)
+        redirected = sum(1 for link in checked_links if getattr(link, "redirect_count", 0) > 0)
 
         csv_content = "URL,Status,SourceType,SourceURL\n"
 
@@ -291,9 +323,12 @@ class LinkChecker:
 
             render_links.append({
                 "url": link.url,
-                "status": link.status_code,
-                "note": safe_note,
-                "source": link.source_url,
+                "status_code": link.status_code,
+                "note": link.note,
+                "source_type": link.source_type,
+                "redirect_count": link.redirect_count,
+                "final_url": link.final_url or link.url,
+                "is_binary": getattr(link, 'is_binary', False),
                 "class": source_class
             })
 
@@ -306,6 +341,7 @@ class LinkChecker:
             successful=successful,
             broken=broken,
             errors=errors,
+            redirected=redirected,
             links=render_links,
             csv_content=csv_content,
             timestamp=now
