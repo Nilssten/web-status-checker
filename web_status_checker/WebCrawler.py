@@ -55,7 +55,7 @@ class LinkChecker:
                           "Chrome/115.0.0.0 Safari/537.36",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
             "Accept-Language": "en-US,en;q=0.9",
-            "Accept-Encoding": "gzip, deflate, br",
+            "Accept-Encoding": "gzip, deflate",
             "Referer": url
         }
 
@@ -89,23 +89,44 @@ class LinkChecker:
 
     async def fetch_with_redirects(self, client, url: str, retries=2):
         """
-        checks a URL, following redirects and returning final status and chain.
+        Checks a URL, following redirects and returning final status and chain.
+        Handles Cloudflare 520/522/524 and timeouts gracefully.
         """
         for attempt in range(retries + 1):
             try:
-                response = await client.get(url, headers=DEFAULT_HEADERS, follow_redirects=True, timeout=15)
+                # normal request first
+                response = await client.get(url, headers=DEFAULT_HEADERS, follow_redirects=True, timeout=20)
+
                 chain = [str(r.url) for r in response.history] + [str(response.url)]
                 redirect_count = len(chain) - 1
                 final_status = response.status_code
                 final_url = str(response.url)
 
-                # Treat final < 400 as passed
+                # Handle Cloudflare-style 520/522/524 responses
+                if final_status in {520, 522, 524}:
+                    logging.warning(
+                        f"Cloudflare-style error {final_status} on {url}. Retrying without HTTP/2..."
+                    )
+                    await asyncio.sleep(2)
+                    # Retry once using a client without HTTP/2
+                    transport = httpx.AsyncHTTPTransport(http2=False)
+                    async with httpx.AsyncClient(transport=transport, timeout=20) as temp_client:
+                        response = await temp_client.get(url, headers=DEFAULT_HEADERS, follow_redirects=True)
+                        final_status = response.status_code
+                        final_url = str(response.url)
+                        chain = [str(r.url) for r in response.history] + [str(response.url)]
+                        redirect_count = len(chain) - 1
+                    if final_status in {520, 522, 524}:
+                        return url, final_status, f"Cloudflare error {final_status}", url, 0, []
+
                 note = self.get_status_notes(final_status)
                 if redirect_count > 0:
                     note += f" (Redirected {redirect_count}x → {final_url})"
 
                 return url, final_status, note, final_url, redirect_count, chain
 
+            except httpx.ReadTimeout:
+                error_msg = "ReadTimeout"
             except httpx.RequestError as e:
                 error_msg = f"RequestError: {e.__class__.__name__}"
             except Exception as e:
@@ -114,7 +135,7 @@ class LinkChecker:
             logging.warning(f"Attempt {attempt + 1} failed for {url}: {error_msg}")
             if attempt == retries:
                 return url, "ERROR", error_msg, url, 0, []
-            await asyncio.sleep(1)
+            await asyncio.sleep(2)
 
     async def check_link_async(self, client, link, retries=2):
         """
@@ -137,7 +158,7 @@ class LinkChecker:
 
     async def check_all_links_async(self, links):
         results = []
-        async with httpx.AsyncClient(http2=True, timeout=10) as client:
+        async with httpx.AsyncClient(http2=True, timeout=10, headers=DEFAULT_HEADERS, follow_redirects=True) as client:
             tasks = [self.check_link_async(client, link) for link in links]
             for coro in tqdm_asyncio.as_completed(tasks, total=len(tasks), desc="Checking links"):
                 url, status, note, final_url, redirect_count, chain = await coro

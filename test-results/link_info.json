@@ -1,475 +1,1632 @@
 [
   {
-    "url": "https://www.google.com/chrome/",
+    "url": "https://discord.gg/C4pdK7Z",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://www.google.com/chrome/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://www.google.com/chrome/"
-    ]
-  },
-  {
-    "url": "https://www.facebook.com/estudiodrowers",
-    "status_code": 400,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "Bad Request: Invalid syntax.",
-    "final_url": "https://www.facebook.com/estudiodrowers",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://www.facebook.com/estudiodrowers"
-    ]
-  },
-  {
-    "url": "https://www.youtube.com/channel/UCww7NJ4ltUK-0pINqOhw-1g",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful. (Redirected 1x → https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCww7NJ4ltUK-0pINqOhw-1g%3Fcbrd%3D1&gl=LV&m=0&pc=yt&cm=2&hl=lv&src=1)",
-    "final_url": "https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCww7NJ4ltUK-0pINqOhw-1g%3Fcbrd%3D1&gl=LV&m=0&pc=yt&cm=2&hl=lv&src=1",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful. (Redirected 1x → https://discord.com/invite/C4pdK7Z)",
+    "final_url": "https://discord.com/invite/C4pdK7Z",
     "redirect_count": 1,
     "redirect_chain": [
-      "https://www.youtube.com/channel/UCww7NJ4ltUK-0pINqOhw-1g",
-      "https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCww7NJ4ltUK-0pINqOhw-1g%3Fcbrd%3D1&gl=LV&m=0&pc=yt&cm=2&hl=lv&src=1"
+      "https://discord.gg/C4pdK7Z",
+      "https://discord.com/invite/C4pdK7Z"
     ]
   },
   {
-    "url": "https://www.linkedin.com/company/drowers/",
+    "url": "http://steam.tools/?utm_source=SteamLadder.com",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://www.linkedin.com/company/drowers/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://www.linkedin.com/company/drowers/"
-    ]
-  },
-  {
-    "url": "https://www.tiktok.com/@drowersestudio",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://www.tiktok.com/@drowersestudio",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://www.tiktok.com/@drowersestudio"
-    ]
-  },
-  {
-    "url": "https://www.instagram.com/drowersestudio",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful. (Redirected 1x → https://www.instagram.com/drowersestudio/)",
-    "final_url": "https://www.instagram.com/drowersestudio/",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful. (Redirected 1x → https://steam.tools/?utm_source=SteamLadder.com)",
+    "final_url": "https://steam.tools/?utm_source=SteamLadder.com",
     "redirect_count": 1,
     "redirect_chain": [
-      "https://www.instagram.com/drowersestudio",
-      "https://www.instagram.com/drowersestudio/"
+      "http://steam.tools/?utm_source=SteamLadder.com",
+      "https://steam.tools/?utm_source=SteamLadder.com"
     ]
   },
   {
-    "url": "https://www.instagram.com/drowersestudio/",
+    "url": "https://steamcommunity.com/groups/SteamLadder/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
+    "source_url": "https://steamladder.com/",
     "note": "OK: The request was successful.",
-    "final_url": "https://www.instagram.com/drowersestudio/",
+    "final_url": "https://steamcommunity.com/groups/SteamLadder/",
     "redirect_count": 0,
     "redirect_chain": [
-      "https://www.instagram.com/drowersestudio/"
+      "https://steamcommunity.com/groups/SteamLadder/"
     ]
   },
   {
-    "url": "https://es.linkedin.com/company/drowers",
+    "url": "http://steamcommunity.com/groups/SteamLadder/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://es.linkedin.com/company/drowers",
-    "redirect_count": 0,
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful. (Redirected 1x → https://steamcommunity.com/groups/SteamLadder/)",
+    "final_url": "https://steamcommunity.com/groups/SteamLadder/",
+    "redirect_count": 1,
     "redirect_chain": [
-      "https://es.linkedin.com/company/drowers"
+      "http://steamcommunity.com/groups/SteamLadder/",
+      "https://steamcommunity.com/groups/SteamLadder/"
     ]
   },
   {
-    "url": "https://emprendapp.com",
+    "url": "https://steamladder.com/profile/76561198134745097/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
+    "source_url": "https://steamladder.com/",
     "note": "OK: The request was successful.",
-    "final_url": "https://emprendapp.com",
+    "final_url": "https://steamladder.com/profile/76561198134745097/",
     "redirect_count": 0,
     "redirect_chain": [
-      "https://emprendapp.com"
+      "https://steamladder.com/profile/76561198134745097/"
     ]
   },
   {
-    "url": "https://entrenair.com",
+    "url": "https://steamladder.com/profile/76561198197719893/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
+    "source_url": "https://steamladder.com/",
     "note": "OK: The request was successful.",
-    "final_url": "https://entrenair.com",
+    "final_url": "https://steamladder.com/profile/76561198197719893/",
     "redirect_count": 0,
     "redirect_chain": [
-      "https://entrenair.com"
+      "https://steamladder.com/profile/76561198197719893/"
     ]
   },
   {
-    "url": "mailto:estudio@drowers.com",
-    "status_code": "ERROR",
+    "url": "https://steamladder.com/profile/76561198317593324/",
+    "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "UnhandledError: unknown url type: '/estudio@drowers.com'",
-    "final_url": "mailto:estudio@drowers.com",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198317593324/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198317593324/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561197999457425/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561197999457425/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561197999457425/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561199468448157/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561199468448157/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561199468448157/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561199494657872/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561199494657872/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561199494657872/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198212710908/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198212710908/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198212710908/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198389241377/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198389241377/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198389241377/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198866252396/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198866252396/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198866252396/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561199219841553/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561199219841553/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561199219841553/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198044770902/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198044770902/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198044770902/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/value/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/value/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/value/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198192424481/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198192424481/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198192424481/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198039386132/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198039386132/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198039386132/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198260880899/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198260880899/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198260880899/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/game_bans/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/game_bans/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/game_bans/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198393825591/",
+    "status_code": 520,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "Cloudflare error 520",
+    "final_url": "https://steamladder.com/profile/76561198393825591/",
     "redirect_count": 0,
     "redirect_chain": []
   },
   {
-    "url": "https://inmocms.com/",
+    "url": "https://steamladder.com/profile/76561198009100803/",
+    "status_code": 520,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "Cloudflare error 520",
+    "final_url": "https://steamladder.com/profile/76561198009100803/",
+    "redirect_count": 0,
+    "redirect_chain": []
+  },
+  {
+    "url": "https://steamladder.com/ladder/playtime/271590/",
+    "status_code": 520,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "Cloudflare error 520",
+    "final_url": "https://steamladder.com/ladder/playtime/271590/",
+    "redirect_count": 0,
+    "redirect_chain": []
+  },
+  {
+    "url": "https://steamladder.com/faq/",
+    "status_code": 520,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "Cloudflare error 520",
+    "final_url": "https://steamladder.com/faq/",
+    "redirect_count": 0,
+    "redirect_chain": []
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198003030375/",
+    "status_code": 520,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "Cloudflare error 520",
+    "final_url": "https://steamladder.com/profile/76561198003030375/",
+    "redirect_count": 0,
+    "redirect_chain": []
+  },
+  {
+    "url": "https://steamladder.com/profile/76561199202258624/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
+    "source_url": "https://steamladder.com/",
     "note": "OK: The request was successful.",
-    "final_url": "https://inmocms.com/",
+    "final_url": "https://steamladder.com/profile/76561199202258624/",
     "redirect_count": 0,
     "redirect_chain": [
-      "https://inmocms.com/"
+      "https://steamladder.com/profile/76561199202258624/"
     ]
   },
   {
-    "url": "https://drowers.com/#1649330901836-81b541ae-dbfb",
+    "url": "https://steamladder.com/games/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
+    "source_url": "https://steamladder.com/",
     "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/#1649330901836-81b541ae-dbfb",
+    "final_url": "https://steamladder.com/games/",
     "redirect_count": 0,
     "redirect_chain": [
-      "https://drowers.com/#1649330901836-81b541ae-dbfb"
+      "https://steamladder.com/games/"
     ]
   },
   {
-    "url": "https://drowers.com/#1649330902801-876ce114-1309",
+    "url": "https://steamladder.com/profile/76561198294650349/",
+    "status_code": 520,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "Cloudflare error 520",
+    "final_url": "https://steamladder.com/profile/76561198294650349/",
+    "redirect_count": 0,
+    "redirect_chain": []
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198019712127/",
+    "status_code": 520,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "Cloudflare error 520",
+    "final_url": "https://steamladder.com/profile/76561198019712127/",
+    "redirect_count": 0,
+    "redirect_chain": []
+  },
+  {
+    "url": "https://steamladder.com/ladder/playtime/730/",
+    "status_code": 520,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "Cloudflare error 520",
+    "final_url": "https://steamladder.com/ladder/playtime/730/",
+    "redirect_count": 0,
+    "redirect_chain": []
+  },
+  {
+    "url": "https://steamladder.com/ladder/badges/48/",
+    "status_code": 520,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "Cloudflare error 520",
+    "final_url": "https://steamladder.com/ladder/badges/48/",
+    "redirect_count": 0,
+    "redirect_chain": []
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198023959749/",
+    "status_code": 520,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "Cloudflare error 520",
+    "final_url": "https://steamladder.com/profile/76561198023959749/",
+    "redirect_count": 0,
+    "redirect_chain": []
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198212206651/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
+    "source_url": "https://steamladder.com/",
     "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/#1649330902801-876ce114-1309",
+    "final_url": "https://steamladder.com/profile/76561198212206651/",
     "redirect_count": 0,
     "redirect_chain": [
-      "https://drowers.com/#1649330902801-876ce114-1309"
+      "https://steamladder.com/profile/76561198212206651/"
     ]
   },
   {
-    "url": "https://drowers.com/#1649330902280-557aed64-6f32",
+    "url": "https://steamladder.com/profile/76561198150467988/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
+    "source_url": "https://steamladder.com/",
     "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/#1649330902280-557aed64-6f32",
+    "final_url": "https://steamladder.com/profile/76561198150467988/",
     "redirect_count": 0,
     "redirect_chain": [
-      "https://drowers.com/#1649330902280-557aed64-6f32"
+      "https://steamladder.com/profile/76561198150467988/"
     ]
   },
   {
-    "url": "https://drowers.com/carrito/",
+    "url": "https://steamladder.com/ladder/badges/2861720/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
+    "source_url": "https://steamladder.com/",
     "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/carrito/",
+    "final_url": "https://steamladder.com/ladder/badges/2861720/",
     "redirect_count": 0,
     "redirect_chain": [
-      "https://drowers.com/carrito/"
+      "https://steamladder.com/ladder/badges/2861720/"
     ]
   },
   {
-    "url": "https://drowers.com/contacto/",
+    "url": "https://steamladder.com/profile/76561198096354242/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
+    "source_url": "https://steamladder.com/",
     "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/contacto/",
+    "final_url": "https://steamladder.com/profile/76561198096354242/",
     "redirect_count": 0,
     "redirect_chain": [
-      "https://drowers.com/contacto/"
+      "https://steamladder.com/profile/76561198096354242/"
     ]
   },
   {
-    "url": "https://drowers.com/contacto",
+    "url": "https://steamladder.com/profile/76561198089412043/",
     "status_code": 200,
     "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful. (Redirected 1x → https://drowers.com/contacto/)",
-    "final_url": "https://drowers.com/contacto/",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198089412043/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198089412043/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198208943801/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198208943801/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198208943801/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/badges/2861720/foil/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/badges/2861720/foil/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/badges/2861720/foil/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198417108689/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198417108689/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198417108689/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198130807766/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198130807766/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198130807766/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/support/contact/",
+    "status_code": 403,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "Forbidden: Access denied.",
+    "final_url": "https://steamladder.com/support/contact/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/support/contact/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198025653291/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198025653291/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198025653291/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198096260905/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198096260905/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198096260905/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/staff/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/staff/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/staff/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198306626714/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198306626714/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198306626714/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198159388675/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198159388675/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198159388675/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/badges/49/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/badges/49/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/badges/49/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/donate/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/donate/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/donate/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198120686366/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198120686366/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198120686366/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561197968423451/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561197968423451/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561197968423451/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198203118756/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198203118756/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198203118756/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198301460892/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198301460892/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198301460892/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198023414915/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198023414915/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198023414915/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198066084037/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198066084037/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198066084037/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198023455525/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198023455525/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198023455525/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561197989256139/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561197989256139/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561197989256139/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198003163863/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198003163863/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198003163863/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198017054389/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198017054389/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198017054389/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198071621154/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198071621154/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198071621154/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/badges/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/badges/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/badges/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198038537892/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198038537892/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198038537892/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/vac/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/vac/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/vac/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/badges/3558920/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/badges/3558920/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/badges/3558920/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198048165534/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198048165534/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198048165534/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/groups/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/groups/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/groups/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561197986603983/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561197986603983/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561197986603983/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198912653263/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198912653263/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198912653263/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/steam_age/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/steam_age/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/steam_age/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198295203109/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198295203109/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198295203109/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198089067428/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198089067428/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198089067428/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561197984432884/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561197984432884/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561197984432884/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198081507037/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198081507037/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198081507037/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/playtime/578080/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/playtime/578080/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/playtime/578080/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198262236331/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198262236331/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198262236331/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/badges/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/badges/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/badges/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561199149306132/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561199149306132/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561199149306132/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561197976968076/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561197976968076/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561197976968076/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198098168017/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198098168017/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198098168017/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/badges/3558920/foil/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/badges/3558920/foil/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/badges/3558920/foil/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/select/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/select/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/select/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/playtime/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/playtime/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/playtime/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/api/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/api/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/api/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198146973883/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198146973883/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198146973883/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561197960267352/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561197960267352/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561197960267352/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198168877244/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198168877244/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198168877244/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561199499421434/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561199499421434/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561199499421434/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561197999473427/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561197999473427/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561197999473427/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198062901118/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198062901118/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198062901118/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198129192831/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198129192831/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198129192831/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198842603734/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198842603734/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198842603734/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198264035001/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198264035001/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198264035001/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198067053149/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198067053149/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198067053149/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198831075066/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198831075066/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198831075066/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198801475475/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198801475475/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198801475475/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198228094348/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198228094348/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198228094348/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198235217560/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198235217560/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198235217560/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198127601057/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198127601057/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198127601057/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561199080934614/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561199080934614/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561199080934614/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198048432253/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198048432253/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198048432253/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198062673538/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198062673538/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198062673538/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198136077175/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198136077175/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198136077175/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/friends/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/friends/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/friends/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198023416824/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198023416824/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198023416824/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198256856681/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198256856681/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198256856681/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198092730606/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198092730606/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198092730606/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198108581917/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198108581917/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198108581917/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/playtime/570/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/playtime/570/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/playtime/570/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198043066606/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198043066606/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198043066606/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/discord/join/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful. (Redirected 2x → https://steamladder.com/login/steam/?next=/discord/join/)",
+    "final_url": "https://steamladder.com/login/steam/?next=/discord/join/",
+    "redirect_count": 2,
+    "redirect_chain": [
+      "https://steamladder.com/discord/join/",
+      "https://steamladder.com/login/steam?next=/discord/join/",
+      "https://steamladder.com/login/steam/?next=/discord/join/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561199260767838/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561199260767838/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561199260767838/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/partners/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/partners/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/partners/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198088078416/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198088078416/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198088078416/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198813424031/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198813424031/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198813424031/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198814267893/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198814267893/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198814267893/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198835780877/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198835780877/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198835780877/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198027584758/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198027584758/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198027584758/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198176366622/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198176366622/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198176366622/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561199176433616/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561199176433616/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561199176433616/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198409565259/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198409565259/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198409565259/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561199023443428/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561199023443428/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561199023443428/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/games/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/games/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/games/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198368894435/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198368894435/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198368894435/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198290287872/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198290287872/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198290287872/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198046160451/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198046160451/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198046160451/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198339417346/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198339417346/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198339417346/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198004332929/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198004332929/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198004332929/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/playtime/440/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/playtime/440/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/playtime/440/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198000472919/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198000472919/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198000472919/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198803770628/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198803770628/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198803770628/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198254085126/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198254085126/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198254085126/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198014898339/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198014898339/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198014898339/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561198103602015/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561198103602015/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561198103602015/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/foil_badges/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/foil_badges/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/foil_badges/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/profile/76561197962473290/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/profile/76561197962473290/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/profile/76561197962473290/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/ladder/xp/",
+    "status_code": 200,
+    "source_type": "link",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful.",
+    "final_url": "https://steamladder.com/ladder/xp/",
+    "redirect_count": 0,
+    "redirect_chain": [
+      "https://steamladder.com/ladder/xp/"
+    ]
+  },
+  {
+    "url": "https://steamladder.com/search/",
+    "status_code": 200,
+    "source_type": "form",
+    "source_url": "https://steamladder.com/",
+    "note": "OK: The request was successful. (Redirected 1x → https://steamladder.com/)",
+    "final_url": "https://steamladder.com/",
     "redirect_count": 1,
     "redirect_chain": [
-      "https://drowers.com/contacto",
-      "https://drowers.com/contacto/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/kit-digital-agente-digitalizador/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/kit-digital-agente-digitalizador/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/kit-digital-agente-digitalizador/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/finalizar-compra/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful. (Redirected 1x → https://drowers.com/carrito/)",
-    "final_url": "https://drowers.com/carrito/",
-    "redirect_count": 1,
-    "redirect_chain": [
-      "https://drowers.com/finalizar-compra/",
-      "https://drowers.com/carrito/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/lolin/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/lolin/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/lolin/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/destacados/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/destacados/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/destacados/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/portfolio/plataforma-bonos-comercio-badalona/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/portfolio/plataforma-bonos-comercio-badalona/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/portfolio/plataforma-bonos-comercio-badalona/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/imagen-corporativa-y-diseno-web-para-entrenair/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/imagen-corporativa-y-diseno-web-para-entrenair/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/imagen-corporativa-y-diseno-web-para-entrenair/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/el-estudio/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/el-estudio/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/el-estudio/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/diseno-web-y-app-personalizada-y-gestion-rrss-de-okitonic/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/diseno-web-y-app-personalizada-y-gestion-rrss-de-okitonic/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/diseno-web-y-app-personalizada-y-gestion-rrss-de-okitonic/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/productos-drowers/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/productos-drowers/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/productos-drowers/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/tienda-online-y-posicionamiento-seo-para-modas-iturriaga/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/tienda-online-y-posicionamiento-seo-para-modas-iturriaga/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/tienda-online-y-posicionamiento-seo-para-modas-iturriaga/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/imagen-corporativa-y-diseno-web-para-dra-marta-pastor/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/imagen-corporativa-y-diseno-web-para-dra-marta-pastor/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/imagen-corporativa-y-diseno-web-para-dra-marta-pastor/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/tienda-online-a-medida-para-happy-kiwwi/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/tienda-online-a-medida-para-happy-kiwwi/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/tienda-online-a-medida-para-happy-kiwwi/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/diseno-de-imagen-corporativa-y-diseno-web-para-alejandro-f-yarritu-arquitecto/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/diseno-de-imagen-corporativa-y-diseno-web-para-alejandro-f-yarritu-arquitecto/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/diseno-de-imagen-corporativa-y-diseno-web-para-alejandro-f-yarritu-arquitecto/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/campana-de-bonos-comercio-para-ayuntamiento-de-barakaldo/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/campana-de-bonos-comercio-para-ayuntamiento-de-barakaldo/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/campana-de-bonos-comercio-para-ayuntamiento-de-barakaldo/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/diseno-web-y-tiendas-online-en-bilbao/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/diseno-web-y-tiendas-online-en-bilbao/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/diseno-web-y-tiendas-online-en-bilbao/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/proyectos/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/proyectos/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/proyectos/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/portfolio/fabricbike/",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/portfolio/fabricbike/",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/portfolio/fabricbike/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/terminos-y-condiciones",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful. (Redirected 1x → https://drowers.com/terminos-y-condiciones/)",
-    "final_url": "https://drowers.com/terminos-y-condiciones/",
-    "redirect_count": 1,
-    "redirect_chain": [
-      "https://drowers.com/terminos-y-condiciones",
-      "https://drowers.com/terminos-y-condiciones/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/politica-de-privacidad",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful. (Redirected 1x → https://drowers.com/politica-de-privacidad/)",
-    "final_url": "https://drowers.com/politica-de-privacidad/",
-    "redirect_count": 1,
-    "redirect_chain": [
-      "https://drowers.com/politica-de-privacidad",
-      "https://drowers.com/politica-de-privacidad/"
-    ]
-  },
-  {
-    "url": "https://drowers.com/#1649330903388-a9f617f5-a7e4",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful.",
-    "final_url": "https://drowers.com/#1649330903388-a9f617f5-a7e4",
-    "redirect_count": 0,
-    "redirect_chain": [
-      "https://drowers.com/#1649330903388-a9f617f5-a7e4"
-    ]
-  },
-  {
-    "url": "https://drowers.com/plataforma-bonos-comercio",
-    "status_code": 200,
-    "source_type": "link",
-    "source_url": "https://drowers.com/",
-    "note": "OK: The request was successful. (Redirected 1x → https://drowers.com/plataforma-bonos-comercio/)",
-    "final_url": "https://drowers.com/plataforma-bonos-comercio/",
-    "redirect_count": 1,
-    "redirect_chain": [
-      "https://drowers.com/plataforma-bonos-comercio",
-      "https://drowers.com/plataforma-bonos-comercio/"
+      "https://steamladder.com/search/",
+      "https://steamladder.com/"
     ]
   }
 ]
